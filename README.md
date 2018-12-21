@@ -1,4 +1,6 @@
 # PlayVisualizer <a href="http://doge.mit-license.org"><img src="http://img.shields.io/:license-mit-blue.svg"></a>
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRYOSKATE%2FPLIVET.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FRYOSKATE%2FPLIVET?ref=badge_shield)
+
 
 
 PlayVisualizer is a program interpreter with visualization of execution state.
@@ -44,3 +46,7 @@ yarn build
 ```
 
 to update `docs/` by webpack.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRYOSKATE%2FPLIVET.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FRYOSKATE%2FPLIVET?ref=badge_large)
