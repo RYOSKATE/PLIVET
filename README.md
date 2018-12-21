@@ -1,16 +1,16 @@
-# PlayVisualizer <a href="http://doge.mit-license.org"><img src="http://img.shields.io/:license-mit-blue.svg"></a>
+# PLIVET <a href="http://doge.mit-license.org"><img src="http://img.shields.io/:license-mit-blue.svg"></a>
 
 
-PlayVisualizer is a program interpreter with visualization of execution state.
+Programming Language Interpreter for Visualization of Execution Trace (PLIVET) is a program interpreter with visualization of execution state.
 
-PV supports;
+PLIVET supports;
 
 * C language
 * Java (now implementing)
 
 ## For User
 
-PV can be used with most modern browsers.
+PLIVET can be used with most modern browsers.
 
 Our build targets are as follows:
 
@@ -20,7 +20,7 @@ Our build targets are as follows:
 
 Demo page is here.
 
-[https://ryoskate.github.io/PlayVisualizer](https://ryoskate.github.io/PlayVisualizer)
+[https://ryoskate.github.io/PLIVET](https://ryoskate.github.io/PLIVET)
 
 ### Offline
 
