@@ -1,0 +1,15 @@
+.icon-red {
+  color: rgb(255, 75, 0);
+}
+
+.icon-green {
+  color: rgb(3, 175, 122);
+}
+
+.icon-blue {
+  color: rgb(0, 90, 255);
+}
+
+.vertical-btn-group {
+  height: 50%;
+}

@@ -1,0 +1,13 @@
+.theme-dark {
+  background-color: rgb(30, 30, 30);
+  color: rgb(241, 241, 241);
+}
+
+.theme-gray {
+  background-color: rgb(100, 100, 100);
+}
+
+.theme-light {
+  background-color: white;
+  color: black;
+}

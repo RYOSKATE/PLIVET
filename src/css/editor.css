@@ -1,0 +1,9 @@
+.editorMain {
+    border: 1px black solid;
+    margin: 1px;
+}
+
+.ace_gutter-cell.ace_breakpoint{ 
+    border-radius: 20px 0px 0px 20px; 
+    box-shadow: 0px 0px 1px 1px red inset; 
+}
