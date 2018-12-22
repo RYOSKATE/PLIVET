@@ -1,0 +1,5 @@
+docs/
+.vscode/
+
+# Whitelist node_modules/ files (ignored by default in FOSSA)
+!node_modules/
