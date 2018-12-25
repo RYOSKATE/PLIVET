@@ -2,14 +2,5 @@
     "extends": "./tsconfig.prod.json",
     "compilerOptions": {
       "esModuleInterop": true,
-      "types": ["jest", "ace"]
-    },
-    "include": [
-      "test"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist",
-        "src"
-    ],
+    }
 }
