@@ -875,6 +875,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hex-rgba@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/hex-rgba/-/hex-rgba-1.0.0.tgz#b2aed2aa9fdd6152b7f0ac5e3733b974d4eba35a"
+  integrity sha512-u3AGV8fjRsDBqY4wOvVWhVCgKDfh2b0h3mux7KPKU1cm/6mJp14OWBINLgBypeBTM89Nm2j+eKQqIoIe7150DA==
+
 "@types/jest@^23.3.10":
   version "23.3.10"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.10.tgz#4897974cc317bf99d4fe6af1efa15957fa9c94de"
@@ -4057,10 +4062,10 @@ he@1.2.x:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-hex-to-rgba@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/hex-to-rgba/-/hex-to-rgba-1.0.2.tgz#1273dc05a499ddc955b80220ae04dcf542decfec"
-  integrity sha512-fL+4NFccs86iOuDnFl1Mhyn471qTPAkpE7k39+JYGPMB3+S9LoUnauQI2nz6BUb3DpYQCx8RqENbaf8IFdKYOg==
+hex-rgb@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hex-rgb/-/hex-rgb-3.0.0.tgz#bdff98ce1c18daec8ed87797fe13b02831a9515a"
+  integrity sha512-iWOUTZu7KQGhErV8JfTQDH5F/M2D0HVd0sexS4Grg4e4RYAiN3c4jfpPqKgfedqeebKcNZBl2z3zlgCtFjpFJQ==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"

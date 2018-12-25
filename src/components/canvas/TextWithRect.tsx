@@ -1,7 +1,8 @@
 import React from 'react';
 import { Rect, Text } from 'react-konva';
 import { CanvasCell } from './CanvasDrawer';
-import hexToRgba from 'hex-to-rgba';
+import hexToRgba from '../Color';
+
 interface Props {
   x: number;
   y: number;

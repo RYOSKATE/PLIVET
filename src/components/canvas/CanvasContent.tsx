@@ -3,7 +3,7 @@ import { Layer, Arrow } from 'react-konva';
 import StackRect from './StackRect';
 import { CanvasDrawer, CanvasStack, CanvasArrow } from './CanvasDrawer';
 import { slot } from '../emitter';
-import hexToRgba from 'hex-to-rgba';
+import hexToRgba from '../Color';
 interface Props {
   canvasDrawer: CanvasDrawer;
 }
