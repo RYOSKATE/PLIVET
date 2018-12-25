@@ -848,14 +848,14 @@
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.10.tgz#780d552467824be4a241b29510a7873a7432c4a6"
   integrity sha512-fOM/Jhv51iyugY7KOBZz2ThfT1gwvsGCfWxpLpZDgkGjpEO4Le9cld07OdskikLjDUQJ43dzDaVRSFwQlpdqVg==
 
-"@types/enzyme-adapter-react-16@^1.0.3":
+"@types/enzyme-adapter-react-16@1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.3.tgz#0cf7025b036694ca8d596fe38f24162e7117acf1"
   integrity sha512-9eRLBsC/Djkys05BdTWgav8v6fSCjyzjNuLwG2sfa2b2g/VAN10luP0zB0VwtOWFQ0LGjIboJJvIsVdU5gqRmg==
   dependencies:
     "@types/enzyme" "*"
 
-"@types/enzyme@*", "@types/enzyme@^3.1.15":
+"@types/enzyme@*", "@types/enzyme@3.1.15":
   version "3.1.15"
   resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.15.tgz#fc9a9695ba9f90cd50c4967e64a8c66ec96913d1"
   integrity sha512-6b4JWgV+FNec1c4+8HauGbXg5gRc1oQK93t2+4W+bHjG/PzO+iPvagY6d6bXAZ+t+ps51Zb2F9LQ4vl0S0Epog==
@@ -875,12 +875,12 @@
   dependencies:
     "@types/node" "*"
 
-"@types/hex-rgba@^1.0.0":
+"@types/hex-rgba@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/hex-rgba/-/hex-rgba-1.0.0.tgz#b2aed2aa9fdd6152b7f0ac5e3733b974d4eba35a"
   integrity sha512-u3AGV8fjRsDBqY4wOvVWhVCgKDfh2b0h3mux7KPKU1cm/6mJp14OWBINLgBypeBTM89Nm2j+eKQqIoIe7150DA==
 
-"@types/jest@^23.3.10":
+"@types/jest@23.3.10":
   version "23.3.10"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.10.tgz#4897974cc317bf99d4fe6af1efa15957fa9c94de"
   integrity sha512-DC8xTuW/6TYgvEg3HEXS7cu9OijFqprVDXXiOcdOKZCU/5PJNLZU37VVvmZHdtMiGOa8wAA/We+JzbdxFzQTRQ==
@@ -3065,7 +3065,7 @@ entities@^1.1.1, entities@~1.1.1:
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
   integrity sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
 
-enzyme-adapter-react-16@^1.7.1:
+enzyme-adapter-react-16@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.7.1.tgz#c37c4cb0fd75e88a063154a7a88096474914496a"
   integrity sha512-OQXKgfHWyHN3sFu2nKj3mhgRcqIPIJX6aOzq5AHVFES4R9Dw/vCBZFMPyaG81g2AZ5DogVh39P3MMNUbqNLTcw==
@@ -3088,7 +3088,7 @@ enzyme-adapter-utils@^1.9.0:
     prop-types "^15.6.2"
     semver "^5.6.0"
 
-enzyme@^3.8.0:
+enzyme@3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.8.0.tgz#646d2d5d0798cb98fdec39afcee8a53237b47ad5"
   integrity sha512-bfsWo5nHyZm1O1vnIsbwdfhU989jk+squU9NKvB+Puwo5j6/Wg9pN5CO0YJelm98Dao3NPjkDZk+vvgwpMwYxw==
@@ -4062,7 +4062,7 @@ he@1.2.x:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-hex-rgb@^3.0.0:
+hex-rgb@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/hex-rgb/-/hex-rgb-3.0.0.tgz#bdff98ce1c18daec8ed87797fe13b02831a9515a"
   integrity sha512-iWOUTZu7KQGhErV8JfTQDH5F/M2D0HVd0sexS4Grg4e4RYAiN3c4jfpPqKgfedqeebKcNZBl2z3zlgCtFjpFJQ==
@@ -4234,7 +4234,7 @@ icss-utils@^4.0.0:
   dependencies:
     postcss "^7.0.5"
 
-identity-obj-proxy@^3.0.0:
+identity-obj-proxy@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz#94d2bda96084453ef36fbc5aaec37e0f79f1fc14"
   integrity sha1-lNK9qWCERT7zb7xarsN+D3nx/BQ=
@@ -5108,7 +5108,7 @@ jest-worker@^23.2.0:
   dependencies:
     merge-stream "^1.0.1"
 
-jest@^23.6.0:
+jest@23.6.0:
   version "23.6.0"
   resolved "https://registry.yarnpkg.com/jest/-/jest-23.6.0.tgz#ad5835e923ebf6e19e7a1d7529a432edfee7813d"
   integrity sha512-lWzcd+HSiqeuxyhG+EnZds6iO3Y3ZEnMrfZq/OTGvF/C+Z4fPMCdhWTGSAiO2Oym9rbEXfwddHhh6jqrTF3+Lw==
@@ -7275,7 +7275,7 @@ react-select@2.1.2:
     react-input-autosize "^2.2.1"
     react-transition-group "^2.2.1"
 
-react-test-renderer@^16.0.0-0, react-test-renderer@^16.7.0:
+react-test-renderer@16.7.0, react-test-renderer@^16.0.0-0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.7.0.tgz#1ca96c2b450ab47c36ba92cd8c03fcefc52ea01c"
   integrity sha512-tFbhSjknSQ6+ttzmuGdv+SjQfmvGcq3PFKyPItohwhhOBmRoTf1We3Mlt3rJtIn85mjPXOkKV+TaKK4irvk9Yg==
@@ -8518,7 +8518,7 @@ tryer@^1.0.0:
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
-ts-jest@^23.10.5:
+ts-jest@23.10.5:
   version "23.10.5"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.10.5.tgz#cdb550df4466a30489bf70ba867615799f388dd5"
   integrity sha512-MRCs9qnGoyKgFc8adDEntAOP64fWK1vZKnOYU1o2HxaqjdJvGqmkLCPCnVq1/If4zkUmEjKPnCiUisTrlX2p2A==
