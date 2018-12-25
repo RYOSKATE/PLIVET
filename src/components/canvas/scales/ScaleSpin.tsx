@@ -24,7 +24,7 @@ export default class ScaleSpin extends React.Component<Props, State> {
           min={this.props.min}
           max={this.props.max}
           step={0.1}
-          onChange={value =>
+          onChange={(value: number | null) =>
             value !== null ? this.props.onScaleChange(value) : null
           }
           style={{

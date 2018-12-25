@@ -14,9 +14,6 @@
         "allowSyntheticDefaultImports": true,
         "downlevelIteration": true
     },
-    "files": [
-        "src/@types/images.d.ts"
-    ],
     "include": [
         "./src/**/*"
     ],

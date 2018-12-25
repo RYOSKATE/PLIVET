@@ -1,17 +1,9 @@
 language: node_js
 
 node_js:
-  - 'stable'
+  - '10'
   - '8'
 
-install: yarn install
-
-before_script:
-	- "curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash"
-script:
-  - fossa init
-  - fossa analyze
-  
 dist: trusty
 sudo: false  
 
