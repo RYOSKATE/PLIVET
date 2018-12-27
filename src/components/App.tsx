@@ -6,6 +6,7 @@ import EditorSide from './EditorSide';
 import CanvasSide from './CanvasSide';
 import { LangProps, ProgLangProps, ThemeProps } from './Props';
 import '../css/theme.css';
+import Footer from './Footer';
 type Props = LangProps & ProgLangProps & ThemeProps;
 
 interface State {}
@@ -17,8 +18,8 @@ export default class App extends React.Component<Props, State> {
   render() {
     const { lang, progLang, theme } = this.props;
     return (
-      <Grid fluid={true} style={{ margin: '5px' }}>
-        <Row>
+      <Grid fluid={true}>
+        <Row style={{ margin: '5px' }}>
           <Col
             lg={4}
             md={5}
@@ -38,6 +39,7 @@ export default class App extends React.Component<Props, State> {
             <CanvasSide lang={lang} />
           </Col>
         </Row>
+        <Footer fromYear={2018} />
       </Grid>
     );
   }
