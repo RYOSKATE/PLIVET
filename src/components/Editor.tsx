@@ -26,6 +26,7 @@ import {
 import translate from '../locales/translate';
 import { ExecState } from 'unicoen.ts/dist/interpreter/ExecState';
 import { LangProps, ProgLangProps, Theme } from './Props';
+import { SyntaxErrorData } from 'unicoen.ts/dist/mapper/SyntaxErrorData';
 
 type Props = LangProps & ProgLangProps;
 interface State {
@@ -62,6 +63,7 @@ export default class Editor extends React.Component<Props, State> {
   private isDebugging = false;
   private checkbox: HTMLInputElement | null = null;
   private noAlert: boolean = false;
+  private highlightIds: number[] = [];
   constructor(props: Props) {
     super(props);
 
@@ -116,7 +118,7 @@ export default class Editor extends React.Component<Props, State> {
 
       const row: number = e.getDocumentPosition().row;
 
-      const session: AceAjax.IEditSession = e.editor.session;
+      const session: AceAjax.IEditSession = e.editor.getSession();
       if (this.lineNumOfBreakpoint.includes(row)) {
         session.clearBreakpoint(row);
         this.lineNumOfBreakpoint = this.lineNumOfBreakpoint.filter(
@@ -158,7 +160,18 @@ export default class Editor extends React.Component<Props, State> {
       lineNumOfBreakpoint,
       progLang
     };
-    if (
+    if (controlEvent === 'SyntaxCheck') {
+      server
+        .send(request)
+        .then((response: Response) => {
+          const { errors } = response;
+          this.setSyntaxError(errors);
+        })
+        .catch(e => {
+          console.log(e);
+          alert(e);
+        });
+    } else if (
       !this.noAlert &&
       this.isDebugging &&
       (controlEvent === 'BackAll' ||
@@ -229,6 +242,32 @@ export default class Editor extends React.Component<Props, State> {
     }
   }
 
+  setSyntaxError(errors: SyntaxErrorData[]) {
+    const editor: AceAjax.Editor = this.editorRef.current.editor;
+    const annotations = errors.map((error: SyntaxErrorData) => {
+      return {
+        row: error.line - 1,
+        column: error.charPositionInLine - 1,
+        text: error.getMsg(),
+        type: 'error'
+      };
+    });
+    const session: AceAjax.IEditSession = editor.getSession();
+    session.setAnnotations(annotations);
+    for (const highlightId of this.highlightIds) {
+      session.removeMarker(highlightId);
+    }
+    this.highlightIds = [];
+    for (const annotation of annotations) {
+      const range = (session as any).highlightLines(
+        annotation.row,
+        annotation.row,
+        'error_line'
+      );
+      this.highlightIds.push(range.id);
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -262,6 +301,12 @@ export default class Editor extends React.Component<Props, State> {
         className="editorMain"
         onChange={(text: string) => {
           this.sourcecode = text;
+          const delaySyntaxCheck = (code: string) => {
+            if (code === this.sourcecode) {
+              signal('debug', 'SyntaxCheck');
+            }
+          };
+          setTimeout(() => delaySyntaxCheck(text), 1000);
         }}
         onBeforeLoad={ace => (this.ace = ace)}
       />

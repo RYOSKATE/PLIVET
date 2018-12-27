@@ -1,8 +1,12 @@
 import { Engine } from 'unicoen.ts/dist/interpreter/Engine';
 import { CPP14Engine } from 'unicoen.ts/dist/interpreter/CPP14/CPP14Engine';
+import { CPP14Mapper } from 'unicoen.ts/dist/mapper/CPP14/CPP14Mapper';
 import { Java8Engine } from 'unicoen.ts/dist/interpreter/Java8/Java8Engine';
+import { Java8Mapper } from 'unicoen.ts/dist/mapper/Java8/Java8Mapper';
 import { ExecState } from 'unicoen.ts/dist/interpreter/ExecState';
 import { signal } from './components/emitter';
+import { UniProgram } from 'unicoen.ts/dist/node/UniProgram';
+import { SyntaxErrorData } from 'unicoen.ts/dist/mapper/SyntaxErrorData';
 export type CONTROL_EVENT =
   | 'Exec'
   | 'Start'
@@ -10,7 +14,8 @@ export type CONTROL_EVENT =
   | 'BackAll'
   | 'StepBack'
   | 'Step'
-  | 'StepAll';
+  | 'StepAll'
+  | 'SyntaxCheck';
 export type DEBUG_STATE =
   | 'First'
   | 'Debugging'
@@ -34,6 +39,7 @@ export class Response {
     public sourcecode: string,
     public debugState: DEBUG_STATE,
     public step: number,
+    public errors: SyntaxErrorData[],
     public execState?: ExecState
   ) {}
 }
@@ -44,7 +50,7 @@ class Server {
   private files: Map<string, ArrayBuffer> = new Map();
   private count: number = 0;
   private engine: Engine | null = null;
-  private mapper: any; // CPP14Mapper | Java8Mapper;
+  private mapper: CPP14Mapper | Java8Mapper | null = null;
   private stateHistory: ExecState[] = [];
   private outputsHistory: string[] = [];
 
@@ -108,7 +114,7 @@ class Server {
     return this.files;
   }
 
-  public async send(request: Request) {
+  public async send(request: Request): Promise<Response> {
     const {
       controlEvent,
       sourcecode,
@@ -137,8 +143,10 @@ class Server {
         return this.StepAll(sourcecode, lineNumOfBreakpoint);
       }
       case 'Exec': {
-        await this.Start(sourcecode, progLang);
-        return this.StepAll(sourcecode, lineNumOfBreakpoint);
+        return this.Exec(sourcecode, progLang, lineNumOfBreakpoint);
+      }
+      case 'SyntaxCheck': {
+        return this.SyntaxCheck(sourcecode, progLang);
       }
     }
   }
@@ -148,7 +156,10 @@ class Server {
     if (this.engine === null) {
       throw new Error('engine is not found');
     }
-    const node = this.rawDataToUniTree(sourcecode); // UniProgram
+    if (this.mapper === null) {
+      throw new Error('mapper is not found');
+    }
+    const node: UniProgram = this.mapper.parseToUniTree(sourcecode); // UniProgram
     const state = this.engine.startStepExecution(node);
     const execState = this.recordExecState(state);
     const stdout = this.engine.getStdout();
@@ -159,7 +170,8 @@ class Server {
       output,
       sourcecode,
       debugState: 'First',
-      step: this.count
+      step: this.count,
+      errors: []
     };
     return res;
   }
@@ -169,12 +181,14 @@ class Server {
       clearTimeout(this.timer);
     }
     this.engine = null;
+    this.mapper = null;
     const ret: Response = {
       sourcecode,
       execState: undefined,
       debugState: 'Stop',
       output: '',
-      step: this.count
+      step: this.count,
+      errors: []
     };
     return ret;
   }
@@ -188,7 +202,8 @@ class Server {
       output,
       sourcecode,
       debugState: 'First',
-      step: this.count
+      step: this.count,
+      errors: []
     };
     return ret;
   }
@@ -204,7 +219,8 @@ class Server {
       output,
       sourcecode,
       debugState: 'Debugging',
-      step: this.count
+      step: this.count,
+      errors: []
     };
     return ret;
   }
@@ -219,7 +235,8 @@ class Server {
         output,
         sourcecode,
         debugState: 'Debugging',
-        step: this.count
+        step: this.count,
+        errors: []
       };
       return ret;
     }
@@ -256,7 +273,8 @@ class Server {
         output,
         sourcecode,
         debugState,
-        step: this.count
+        step: this.count,
+        errors: []
       };
       return ret;
     }
@@ -267,7 +285,8 @@ class Server {
       sourcecode,
       execState: this.getLastHistory(),
       debugState: 'EOF',
-      step: this.count
+      step: this.count,
+      errors: []
     };
     return ret;
   }
@@ -301,16 +320,35 @@ class Server {
       output,
       sourcecode,
       debugState,
-      step: currentCount
+      step: currentCount,
+      errors: []
     };
   }
 
-  private rawDataToUniTree(str: string) {
-    let text = str;
-    if (this.engine instanceof CPP14Engine) {
-      text = CPP14Engine.replaceDefine(str);
+  private async Exec(
+    sourcecode: string,
+    progLang?: string,
+    lineNumOfBreakpoint?: number[]
+  ) {
+    await this.Start(sourcecode, progLang);
+    return this.StepAll(sourcecode, lineNumOfBreakpoint);
+  }
+
+  private async SyntaxCheck(sourcecode: string, progLang?: string) {
+    await this.dynamicLoadMapper(progLang);
+    if (this.mapper === null) {
+      throw new Error('mapper is not found');
     }
-    return this.mapper.parse(text);
+    const errors: SyntaxErrorData[] = this.mapper.checkSyntaxError(sourcecode);
+    const ret: Response = {
+      sourcecode,
+      errors,
+      execState: undefined,
+      debugState: 'Stop',
+      output: '',
+      step: this.count
+    };
+    return ret;
   }
 
   private recordOutputText(output: string) {

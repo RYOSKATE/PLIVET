@@ -98,7 +98,7 @@
     "tslint-loader": "3.5.4",
     "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.2.2",
-    "unicoen.ts": "0.2.0",
+    "unicoen.ts": "0.2.1",
     "vector2d": "3.0.0",
     "webpack": "4.28.2",
     "webpack-bundle-analyzer": "3.0.3",

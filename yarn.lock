@@ -8705,10 +8705,10 @@ unicode-property-aliases-ecmascript@^1.0.4:
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.4.tgz#5a533f31b4317ea76f17d807fa0d116546111dd0"
   integrity sha512-2WSLa6OdYd2ng8oqiGIWnJqyFArvhn+5vgx5GTxMbUYjCYKUcuKS62YLFF0R/BDGlB1yzXjQOLtPAfHsgirEpg==
 
-unicoen.ts@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/unicoen.ts/-/unicoen.ts-0.2.0.tgz#b1daf2eb80721aa84634da8b958306f7f74d5ddb"
-  integrity sha512-uuJeoK4vyOdUerZ1r5ivHS8WP4hXXcNZgispcgJrhYZjZXQMALb93YMfM/o2FckKMbxc7p4xNQMOqX0ShNg/hw==
+unicoen.ts@0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/unicoen.ts/-/unicoen.ts-0.2.1.tgz#0950e770792df27c6c450734e90aa1deb2123aaa"
+  integrity sha512-qpwyfBiSAIlFTRkGWvszFu0RMe/8Xc8OOvpJBlr1/5qeHaFvpeRoOmljeexF6+fHTLHn3MLxJhGVXMFJS0uUkg==
   dependencies:
     "@types/node" "^9.6.32"
     agh.sprintf "0.0.11"
