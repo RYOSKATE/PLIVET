@@ -44,7 +44,6 @@
     "@types/enzyme-adapter-react-16": "1.0.3",
     "@types/events": "1.2.0",
     "@types/hashids": "1.0.30",
-    "@types/hex-rgba": "1.0.0",
     "@types/jest": "23.3.10",
     "@types/jquery": "3.3.28",
     "@types/rc-slider": "8.6.0",
