@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Stage } from 'react-konva';
 import { slot } from '../emitter';
-import { ExecState } from 'unicoen.ts/dist/interpreter/ExecState';
+import { ExecState } from 'unicoen.ts/dist/interpreter/Engine/ExecState';
 import CanvasContent from './CanvasContent';
 import '../../css/canvas.css';
 import { CanvasDrawer } from './CanvasDrawer';

@@ -1,12 +1,8 @@
-import { Engine } from 'unicoen.ts/dist/interpreter/Engine';
-import { CPP14Engine } from 'unicoen.ts/dist/interpreter/CPP14/CPP14Engine';
-import { CPP14Mapper } from 'unicoen.ts/dist/mapper/CPP14/CPP14Mapper';
-import { Java8Engine } from 'unicoen.ts/dist/interpreter/Java8/Java8Engine';
-import { Java8Mapper } from 'unicoen.ts/dist/mapper/Java8/Java8Mapper';
-import { ExecState } from 'unicoen.ts/dist/interpreter/ExecState';
+import { SyntaxErrorData } from 'unicoen.ts/dist/interpreter/mapper/SyntaxErrorData';
+import { ExecState } from 'unicoen.ts/dist/interpreter/Engine/ExecState';
 import { signal } from './components/emitter';
-import { UniProgram } from 'unicoen.ts/dist/node/UniProgram';
-import { SyntaxErrorData } from 'unicoen.ts/dist/mapper/SyntaxErrorData';
+import { Interpreter } from 'unicoen.ts/dist/interpreter/Interpreter';
+
 export type CONTROL_EVENT =
   | 'Exec'
   | 'Start'
@@ -49,36 +45,28 @@ class Server {
   private isExecuting: boolean = false;
   private files: Map<string, ArrayBuffer> = new Map();
   private count: number = 0;
-  private engine: Engine | null = null;
-  private mapper: CPP14Mapper | Java8Mapper | null = null;
+  private interpreter: Interpreter | null = null;
   private stateHistory: ExecState[] = [];
   private outputsHistory: string[] = [];
 
-  private async dynamicLoadMapper(progLang?: string) {
+  private async dynamicLoadInterpreter(progLang?: string) {
     if (typeof progLang === 'undefined') {
-      throw new Error('Problem selected programming language');
+      throw new Error('Selected programming language is invalid.');
     } else if (progLang === 'c_cpp') {
-      const module = await import(/* webpackChunkName: "CPP14Mapper" */ 'unicoen.ts/dist/mapper/CPP14/CPP14Mapper');
-      this.mapper = new module.CPP14Mapper();
+      const module = await import(/* webpackChunkName: "CPP14Interpreter" */ 'unicoen.ts/dist/interpreter/CPP14/CPP14Interpreter');
+      this.interpreter = new module.CPP14Interpreter();
     } else if (progLang === 'java') {
-      const module = await import(/* webpackChunkName: "Java8Mapper" */ 'unicoen.ts/dist/mapper/Java8/Java8Mapper');
-      this.mapper = new module.Java8Mapper();
+      const module = await import(/* webpackChunkName: "Java8Interpreter" */ 'unicoen.ts/dist/interpreter/Java8/Java8Interpreter');
+      this.interpreter = new module.Java8Interpreter();
     }
   }
   private async reset(progLang?: string) {
     this.count = 0;
-    if (typeof progLang === 'undefined') {
-      this.engine = new Engine();
-    } else if (progLang === 'c_cpp') {
-      this.engine = new CPP14Engine();
-    } else if (progLang === 'java') {
-      this.engine = new Java8Engine();
+    await this.dynamicLoadInterpreter(progLang);
+    if (this.interpreter === null) {
+      throw new Error('Interpreter is not found');
     }
-    if (this.engine === null) {
-      throw new Error('Problem initializing engine');
-    }
-    await this.dynamicLoadMapper(progLang);
-    this.engine.setFileList(this.files);
+    this.interpreter.setFileList(this.files);
     this.stateHistory = [];
     this.outputsHistory = [];
   }
@@ -153,16 +141,12 @@ class Server {
 
   private async Start(sourcecode: string, progLang?: string) {
     await this.reset(progLang);
-    if (this.engine === null) {
-      throw new Error('engine is not found');
+    if (this.interpreter === null) {
+      throw new Error('interpreter is not found');
     }
-    if (this.mapper === null) {
-      throw new Error('mapper is not found');
-    }
-    const node: UniProgram = this.mapper.parseToUniTree(sourcecode); // UniProgram
-    const state = this.engine.startStepExecution(node);
+    const state = this.interpreter.startStepExecution(sourcecode);
     const execState = this.recordExecState(state);
-    const stdout = this.engine.getStdout();
+    const stdout = this.interpreter.getStdout();
     const output = this.recordOutputText(stdout);
     this.isExecuting = true;
     const res: Response = {
@@ -180,8 +164,7 @@ class Server {
     if (this.timer !== null) {
       clearTimeout(this.timer);
     }
-    this.engine = null;
-    this.mapper = null;
+    this.interpreter = null;
     const ret: Response = {
       sourcecode,
       execState: undefined,
@@ -241,30 +224,30 @@ class Server {
       return ret;
     }
     if (this.isExecuting) {
-      if (this.engine === null) {
+      if (this.interpreter === null) {
         throw new Error('engine is not found');
       }
-      if (this.engine.getIsWaitingForStdin()) {
+      if (this.interpreter.getIsWaitingForStdin()) {
         if (stdinText !== undefined) {
-          this.engine.stdin(stdinText);
+          this.interpreter.stdin(stdinText);
         }
         //  console.log(`stdin:${stdinText}`);
       }
-      let state = this.engine.stepExecute();
+      let state = this.interpreter.stepExecute();
       // let maxSkip = 10;
       // while (state.getCurrentExpr().codeRange == null && 0 < --maxSkip) {
       //   state = this.engine.stepExecute();
       // }
       const execState = this.recordExecState(state);
-      const stdout = this.engine.getStdout();
+      const stdout = this.interpreter.getStdout();
       //  console.log(`stdout:${stdout}`);
       const output = this.recordOutputText(stdout);
       //  console.log(`output:${output}`);
       // let stateText = `Step:${this.count} | Value:${execState.getCurrentValue()}`;
       let debugState: DEBUG_STATE = 'Debugging';
-      if (this.engine.getIsWaitingForStdin()) {
+      if (this.interpreter.getIsWaitingForStdin()) {
         debugState = 'stdin';
-      } else if (!this.engine.isStepExecutionRunning()) {
+      } else if (!this.interpreter.isStepExecutionRunning()) {
         debugState = 'EOF';
         this.isExecuting = false;
       }
@@ -334,15 +317,15 @@ class Server {
     return this.StepAll(sourcecode, lineNumOfBreakpoint);
   }
 
-  private async SyntaxCheck(sourcecode: string, progLang?: string) {
-    await this.dynamicLoadMapper(progLang);
-    if (this.mapper === null) {
-      throw new Error('mapper is not found');
+  private async SyntaxCheck(code: string, progLang?: string) {
+    await this.dynamicLoadInterpreter(progLang);
+    if (this.interpreter === null) {
+      throw new Error('Interpreter is not found');
     }
-    const errors: SyntaxErrorData[] = this.mapper.checkSyntaxError(sourcecode);
+    const errors: SyntaxErrorData[] = this.interpreter.checkSyntaxError(code);
     const ret: Response = {
-      sourcecode,
       errors,
+      sourcecode: code,
       execState: undefined,
       debugState: 'Stop',
       output: '',
