@@ -24,9 +24,9 @@ import {
   DEBUG_STATE
 } from '../server';
 import translate from '../locales/translate';
-import { ExecState } from 'unicoen.ts/dist/interpreter/ExecState';
+import { ExecState } from 'unicoen.ts/dist/interpreter/Engine/ExecState';
 import { LangProps, ProgLangProps, Theme } from './Props';
-import { SyntaxErrorData } from 'unicoen.ts/dist/mapper/SyntaxErrorData';
+import { SyntaxErrorData } from 'unicoen.ts/dist/interpreter/mapper/SyntaxErrorData';
 
 type Props = LangProps & ProgLangProps;
 interface State {

@@ -1,6 +1,6 @@
-import { Variable } from 'unicoen.ts/dist/interpreter/Variable';
-import { ExecState } from 'unicoen.ts/dist/interpreter/ExecState';
-import { Stack } from 'unicoen.ts/dist/interpreter/Stack';
+import { Variable } from 'unicoen.ts/dist/interpreter/Engine/Variable';
+import { ExecState } from 'unicoen.ts/dist/interpreter/Engine/ExecState';
+import { Stack } from 'unicoen.ts/dist/interpreter/Engine/Stack';
 import { Vector } from 'vector2d';
 import { signal } from '../emitter';
 import Hashids from 'hashids';
