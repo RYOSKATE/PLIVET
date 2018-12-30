@@ -4,8 +4,9 @@
 }
 
 .ace_gutter-cell.ace_breakpoint{ 
-    border-radius: 20px 0px 0px 20px; 
-    box-shadow: 0px 0px 1px 1px red inset; 
+    background-image: url('../images/breakpoint.png');
+    background-repeat: no-repeat;
+    background-position: 2px center;
 }
 
 .error_line {

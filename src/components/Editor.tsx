@@ -107,7 +107,7 @@ export default class Editor extends React.Component<Props, State> {
       const target: GutterMousedownEventTarget = e.domEvent.currentTarget;
       if (
         typeof target.className !== 'undefined' &&
-        target.className.indexOf('ace_gutter-cell') === -1
+        target.className.indexOf('ace_gutter') === -1
       ) {
         return;
       }

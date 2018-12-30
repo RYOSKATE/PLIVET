@@ -53,10 +53,10 @@ class Server {
     if (typeof progLang === 'undefined') {
       throw new Error('Selected programming language is invalid.');
     } else if (progLang === 'c_cpp') {
-      const module = await import(/* webpackChunkName: "CPP14Interpreter" */ 'unicoen.ts/dist/interpreter/CPP14/CPP14Interpreter');
+      const module = await import(/* webpackChunkName: "CPP14" */ 'unicoen.ts/dist/interpreter/CPP14/CPP14Interpreter');
       this.interpreter = new module.CPP14Interpreter();
     } else if (progLang === 'java') {
-      const module = await import(/* webpackChunkName: "Java8Interpreter" */ 'unicoen.ts/dist/interpreter/Java8/Java8Interpreter');
+      const module = await import(/* webpackChunkName: "Java8" */ 'unicoen.ts/dist/interpreter/Java8/Java8Interpreter');
       this.interpreter = new module.Java8Interpreter();
     }
   }
@@ -280,19 +280,23 @@ class Server {
       const ret: Response = this.Step(sourcecode);
       if (ret.debugState === 'EOF') {
         signal('EOF', ret);
+        return;
       } else if (ret.debugState === 'stdin') {
         signal('stdin', ret);
-      } else if (typeof ret.execState !== 'undefined') {
-        const codeRange = ret.execState.getNextExpr().codeRange;
-        if (
-          typeof lineNumOfBreakpoint !== 'undefined' &&
-          lineNumOfBreakpoint.includes(codeRange.begin.y - 1)
-        ) {
-          signal('Breakpoint', ret);
-        } else {
-          this.timer = setTimeout(loop.bind(this), 1);
+        return;
+      } else if (typeof lineNumOfBreakpoint !== 'undefined') {
+        if (typeof ret.execState !== 'undefined') {
+          const nextExpr = ret.execState.getNextExpr();
+          const { codeRange } = nextExpr;
+          if (codeRange) {
+            if (lineNumOfBreakpoint.includes(codeRange.begin.y - 1)) {
+              signal('Breakpoint', ret);
+              return;
+            }
+          }
         }
       }
+      this.timer = setTimeout(loop.bind(this), 1);
     };
     loop();
     const execState = this.stateHistory[currentCount];

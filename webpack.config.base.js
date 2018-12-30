@@ -64,6 +64,10 @@ module.exports = {
                 ],
             },
             {
+                test: /\.(gif|png)$/,
+                loaders: 'url-loader'
+              },
+            {
                 test: /\.(woff|woff2|eot|ttf|svg)$/,
                 loader: 'file-loader?name=./font/[name].[ext]'
             }
