@@ -5,7 +5,7 @@ import Canvas from './canvas/Canvas';
 // tslint:disable-next-line:import-name
 import ContainerDimensions from 'react-container-dimensions';
 import ScaleMenu from './canvas/scales/ScaleMune';
-import ThemeButton from './menus/controle_buttons/ThemeButton';
+// import ThemeButton from './menus/controle_buttons/ThemeButton';
 import { LangProps } from './Props';
 
 type Props = LangProps;
@@ -35,7 +35,7 @@ export default class CanvasSide extends React.Component<Props, State> {
           />
         </Col>
         <Col lg={1} md={1} sm={1} xs={1}>
-          <ThemeButton lang={this.props.lang} />
+          {/* <ThemeButton lang={this.props.lang} /> */}
         </Col>
         <Col lg={12} md={12} sm={12} xs={12}>
           <ContainerDimensions>
