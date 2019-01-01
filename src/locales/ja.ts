@@ -52,10 +52,29 @@ int main(){
   pd_arr[0] = malloc(sizeof(int) * 2);
   pd_arr[1] = malloc(sizeof(int) * 2);
 
+  free(pd_arr[0]);//メモリの解放
+
   printf("Hello,world!\n");//標準出力
 
-  //メモリの解放
-  free(pd_arr[0]);
+  //ファイル出力
+  {
+    FILE* fp=NULL;
+    fp = fopen("PLIVET.txt", "w");
+    fputs("PLIVET", fp);
+    fclose(fp);
+  }
+
+  //ファイル入力
+  {
+    FILE* fp=NULL;
+    char buf[7];
+    fp = fopen("PLIVET.txt", "r");
+    while(fgets(buf,10,fp) != NULL) {
+      printf("%s",buf);
+    }
+    fclose(fp);
+  }
+
   return 0;
 }`,
   sourceCodeJava: String.raw`public class Main {

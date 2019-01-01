@@ -198,7 +198,14 @@ export default class Editor extends React.Component<Props, State> {
 
   recieve(response: Response) {
     try {
-      const { debugState, execState, output, step, sourcecode } = response;
+      const {
+        debugState,
+        execState,
+        output,
+        step,
+        sourcecode,
+        files
+      } = response;
       this.isDebugging = debugState !== 'Stop';
       this.sentSourcecode = sourcecode;
       if (debugState === 'Executing') {
@@ -207,6 +214,7 @@ export default class Editor extends React.Component<Props, State> {
       signal('changeState', debugState, step);
       signal('changeOutput', output);
       signal('draw', execState);
+      signal('files', files);
       this.setHighlightOnCode(debugState, execState);
     } catch (e) {
       console.log(e);

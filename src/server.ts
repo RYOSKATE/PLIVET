@@ -36,6 +36,7 @@ export class Response {
     public debugState: DEBUG_STATE,
     public step: number,
     public errors: SyntaxErrorData[],
+    public files: Map<string, ArrayBuffer>,
     public execState?: ExecState
   ) {}
 }
@@ -79,14 +80,14 @@ class Server {
         reject(new DOMException('Problem parsing input file.'));
       };
 
-      reader.onload = function(this: Server) {
+      reader.onload = () => {
         if (reader.result instanceof ArrayBuffer) {
           this.files.set(file.name, reader.result);
           resolve(reader.result);
         } else {
           reject(new DOMException('Problem loading input file.'));
         }
-      }.bind(this);
+      };
 
       reader.readAsArrayBuffer(file);
     });
@@ -155,7 +156,8 @@ class Server {
       sourcecode,
       debugState: 'First',
       step: this.count,
-      errors: []
+      errors: [],
+      files: this.files
     };
     return res;
   }
@@ -171,7 +173,8 @@ class Server {
       debugState: 'Stop',
       output: '',
       step: this.count,
-      errors: []
+      errors: [],
+      files: this.files
     };
     return ret;
   }
@@ -186,7 +189,8 @@ class Server {
       sourcecode,
       debugState: 'First',
       step: this.count,
-      errors: []
+      errors: [],
+      files: this.files
     };
     return ret;
   }
@@ -203,7 +207,8 @@ class Server {
       sourcecode,
       debugState: 'Debugging',
       step: this.count,
-      errors: []
+      errors: [],
+      files: this.files
     };
     return ret;
   }
@@ -219,7 +224,8 @@ class Server {
         sourcecode,
         debugState: 'Debugging',
         step: this.count,
-        errors: []
+        errors: [],
+        files: this.files
       };
       return ret;
     }
@@ -257,7 +263,8 @@ class Server {
         sourcecode,
         debugState,
         step: this.count,
-        errors: []
+        errors: [],
+        files: this.files
       };
       return ret;
     }
@@ -269,7 +276,8 @@ class Server {
       execState: this.getLastHistory(),
       debugState: 'EOF',
       step: this.count,
-      errors: []
+      errors: [],
+      files: this.files
     };
     return ret;
   }
@@ -308,7 +316,8 @@ class Server {
       sourcecode,
       debugState,
       step: currentCount,
-      errors: []
+      errors: [],
+      files: this.files
     };
   }
 
@@ -333,7 +342,8 @@ class Server {
       execState: undefined,
       debugState: 'Stop',
       output: '',
-      step: this.count
+      step: this.count,
+      files: this.files
     };
     return ret;
   }

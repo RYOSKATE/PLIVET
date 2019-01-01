@@ -10,6 +10,7 @@ import { LangProps } from './Props';
 import translate from '../locales/translate';
 import { server } from '../server';
 import FileItem from './FileItem';
+import { slot } from './emitter';
 type Props = LangProps;
 
 interface State {
@@ -22,6 +23,9 @@ export default class FileForm extends React.Component<Props, State> {
     this.state = { filelist: null };
     this.onFileSelected = this.onFileSelected.bind(this);
     this.onFileDelete = this.onFileDelete.bind(this);
+    slot('files', (filelist: Map<string, ArrayBuffer>) => {
+      this.setState({ filelist });
+    });
   }
 
   async onFileSelected(e: React.FormEvent<FormControl>) {

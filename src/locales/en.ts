@@ -58,8 +58,26 @@ int main(){
 
   printf("Hello,world!\n");//standard output
 
-  //memory leak
-  free(pd_arr[0]);
+  free(pd_arr[0]);//memory leak
+
+  //File Output
+  {
+    FILE* fp=NULL;
+    fp = fopen("PLIVET.txt", "w");
+    fputs("PLIVET", fp);
+    fclose(fp);
+  }
+
+  //File Input
+  {
+    FILE* fp=NULL;
+    char buf[7];
+    fp = fopen("PLIVET.txt", "r");
+    while(fgets(buf,10,fp) != NULL) {
+      printf("%s",buf);
+    }
+    fclose(fp);
+  }
   return 0;
 }`,
   sourceCodeJava: String.raw`public class Main {

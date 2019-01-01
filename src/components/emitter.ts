@@ -13,7 +13,8 @@ export type event =
   | 'redraw'
   | 'EOF'
   | 'stdin'
-  | 'Breakpoint';
+  | 'Breakpoint'
+  | 'files';
 export const slot = (
   event: event,
   listener: (...args: any[]) => void
