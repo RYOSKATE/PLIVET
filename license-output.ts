@@ -15,16 +15,19 @@ exec(
     const software = 'The following software may be included in this product: ';
     // tslint:disable:prettier
     const software2 = 'This software contains the following license and notice below:';
+    const copyof = 'A copy of the source code may be downloaded from';
     const licenses = stdout
       .replace(softwares, `<div class="c1">${softwares}.</div>`)
       .split(software)
       .map((text: string) =>
       `<div class="c0">` + text
           .trim()
+          .replace(copyof, `\n</div><div class="c1">${copyof}`)
+          .replace(/\r?\n/g, '<br>')
           .replace(/\r?\n/g, '<br>')
           .replace(
             software2,
-            `</div><div class="c1">This software may be included in this product contains the following license and notice below:</div><div class="c2">`
+            `<br>This software may be included in this product contains the following license and notice below:</div><div class="c2">`
           ) + '</div>'
       )
       .join('');
