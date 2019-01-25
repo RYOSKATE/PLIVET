@@ -6,7 +6,7 @@ PLIVET supports;
 
 * C language
 * Java (now implementing)
-
+* Python (now implementing)
 ## For User
 
 PLIVET can be used with most modern browsers.

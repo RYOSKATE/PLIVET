@@ -77,9 +77,56 @@ int main(){
 
   return 0;
 }`,
-  sourceCodeJava: String.raw`public class Main {
+  sourceCodeJava: String.raw`import java.util.*;
+public class Main {
   public static void main(String[] args) {
-    System.out.println("3+2は" + (3 + 2) + "です。");
+    Scanner sc = new Scanner(System.in);
+    while (true) {
+      int n = sc.nextInt();
+      int r = sc.nextInt();
+      if (n == 0) {
+        break;
+      }
+      int[] a = new int[n];
+      int[] b = new int[n];
+      for (int i = 0; i < n; i++) {
+        a[i] = n - i;
+      }
+      for (int i = 0; i < r; i++) {
+        int p = sc.nextInt();
+        int c = sc.nextInt();
+        p--;
+        for (int j = 0; j < c; j++) {
+          b[j] = a[p + j];
+        }
+        for (int j = 0; j < p; j++) {
+          b[c + j] = a[j];
+        }
+        for (int j = 0; j < p + c; j++) {
+          a[j] = b[j];
+        }
+      }
+      System.out.println(a[0]);
+    }
   }
-}`
+}`,
+  sourceCodePython: String.raw`while True:
+  n, r = map(int, input().split())
+  if n == 0:
+    break
+  a = [0] * n
+  b = [0] * n
+  for i in range(n):
+    a[i] = b[i] = n - i
+  for i in range(r):
+    p, c = map(int, input().split())
+    p = p - 1
+    for j in range(c):
+      b[j] = a[p + j]
+    for j in range(p):
+      b[c + j] = a[j]
+    for j in range(p + c):
+      a[j] = b[j]
+  print(a[0])
+`
 };

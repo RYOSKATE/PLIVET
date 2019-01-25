@@ -10,6 +10,8 @@ import 'brace/mode/c_cpp';
 import 'brace/snippets/c_cpp';
 import 'brace/mode/java';
 import 'brace/snippets/java';
+import 'brace/mode/python';
+import 'brace/snippets/python';
 import 'brace/theme/textmate';
 import 'brace/theme/monokai';
 import 'brace/ext/language_tools';
@@ -74,8 +76,8 @@ export default class Editor extends React.Component<Props, State> {
 
     this.hideAlert = this.hideAlert.bind(this);
 
-    slot('debug', (controlEvent: CONTROL_EVENT) => {
-      this.send(controlEvent);
+    slot('debug', (controlEvent: CONTROL_EVENT, stdinText?: string) => {
+      this.send(controlEvent, stdinText);
     });
     slot('EOF', (response: Response) => {
       this.recieve(response);
@@ -103,6 +105,9 @@ export default class Editor extends React.Component<Props, State> {
   componentDidMount() {
     // Enable breakpoint
     const editor: AceAjax.Editor = this.editorRef.current.editor;
+    editor.on('keydown', (e: any) => {
+      console.log(e);
+    });
     editor.on('guttermousedown', (e: GutterMousedownEvent) => {
       const target: GutterMousedownEventTarget = e.domEvent.currentTarget;
       if (
@@ -150,13 +155,14 @@ export default class Editor extends React.Component<Props, State> {
     }
   }
 
-  send(controlEvent: CONTROL_EVENT) {
+  send(controlEvent: CONTROL_EVENT, stdinText?: string) {
     const sourcecode = this.sourcecode;
     const lineNumOfBreakpoint = this.lineNumOfBreakpoint;
     const progLang = this.props.progLang;
     const request: Request = {
       sourcecode,
       controlEvent,
+      stdinText,
       lineNumOfBreakpoint,
       progLang
     };

@@ -43,7 +43,8 @@ export default class LangAndHow extends React.Component<Props, State> {
             signal="changeProgLang"
             options={[
               { value: 'c_cpp', label: 'C' },
-              { value: 'java', label: 'Java(WIP)' }
+              { value: 'java', label: 'Java(WIP)' },
+              { value: 'python', label: 'Python(WIP)' }
             ]}
             isDisabled={this.state.isDebugging}
           />

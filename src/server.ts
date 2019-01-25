@@ -59,6 +59,9 @@ class Server {
     } else if (progLang === 'java') {
       const module = await import(/* webpackChunkName: "Java8" */ 'unicoen.ts/dist/interpreter/Java8/Java8Interpreter');
       this.interpreter = new module.Java8Interpreter();
+    } else if (progLang === 'python') {
+      const module = await import(/* webpackChunkName: "Python3" */ 'unicoen.ts/dist/interpreter/Python3/Python3Interpreter');
+      this.interpreter = new module.Python3Interpreter();
     }
   }
   private async reset(progLang?: string) {

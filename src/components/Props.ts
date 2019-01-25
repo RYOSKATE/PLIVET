@@ -1,5 +1,5 @@
 export type Lang = 'ja' | 'en';
-export type ProgLang = 'c_cpp' | 'java';
+export type ProgLang = 'c_cpp' | 'java' | 'python';
 export type Theme = 'light' | 'dark';
 
 export interface LangProps extends React.Props<{}> {
