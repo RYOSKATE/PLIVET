@@ -47,7 +47,7 @@
     "@types/jest": "23.3.14",
     "@types/jquery": "3.3.29",
     "@types/rc-slider": "8.6.2",
-    "@types/react": "16.8.3",
+    "@types/react": "16.8.4",
     "@types/react-bootstrap": "0.32.17",
     "@types/react-dom": "16.8.2",
     "@types/react-event-listener": "0.4.9",
