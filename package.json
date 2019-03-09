@@ -52,7 +52,7 @@
     "@types/react-dom": "16.8.2",
     "@types/react-event-listener": "0.4.9",
     "@types/react-numeric-input": "2.2.3",
-    "@types/react-select": "2.0.13",
+    "@types/react-select": "2.0.14",
     "@types/string-hash": "1.1.1",
     "babel-loader": "8.0.5",
     "bootstrap": "^3.3.7",

@@ -1013,10 +1013,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-select@2.0.13":
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-2.0.13.tgz#b6aa7a18272b212afa0c90a5cbecf462eda26621"
-  integrity sha512-DHHMuKNPCXUfcrroAc/BRwgqujipaYLxiYWTNr/wa1kLJ15ublhqaFCsH6z9SRXNdbiNEaU+42lJF7TeLFsj1g==
+"@types/react-select@2.0.14":
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-2.0.14.tgz#f546d5d7cdc825641a0976959f004acdec4df551"
+  integrity sha512-2iocIutwg8sMOT5H//9B29MgksBG9aSpHmnSEbFX6GmVfGHlq48WBtuuZCnxQ8A8yqV3vGg7hYdlZ7Ra82hhfA==
   dependencies:
     "@types/react" "*"
     "@types/react-dom" "*"
