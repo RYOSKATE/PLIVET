@@ -42,7 +42,7 @@
     "@types/bootstrap": "^3.3.40",
     "@types/enzyme": "3.9.1",
     "@types/enzyme-adapter-react-16": "1.0.5",
-    "@types/events": "1.2.0",
+    "@types/events": "3.0.0",
     "@types/hashids": "1.0.30",
     "@types/jest": "23.3.14",
     "@types/jquery": "3.3.29",
