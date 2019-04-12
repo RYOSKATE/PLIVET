@@ -13,7 +13,8 @@ module.exports = function (api) {
               "not ie 11"
           ]
         },
-        useBuiltIns: "usage"
+        useBuiltIns: "usage",
+        corejs: 3
       }]
     ],
     plugins: [
