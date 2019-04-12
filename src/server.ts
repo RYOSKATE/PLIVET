@@ -54,12 +54,15 @@ class Server {
     if (typeof progLang === 'undefined') {
       throw new Error('Selected programming language is invalid.');
     } else if (progLang === 'c_cpp') {
+      // prettier-ignore
       const module = await import(/* webpackChunkName: "CPP14" */ 'unicoen.ts/dist/interpreter/CPP14/CPP14Interpreter');
       this.interpreter = new module.CPP14Interpreter();
     } else if (progLang === 'java') {
+      // prettier-ignore
       const module = await import(/* webpackChunkName: "Java8" */ 'unicoen.ts/dist/interpreter/Java8/Java8Interpreter');
       this.interpreter = new module.Java8Interpreter();
     } else if (progLang === 'python') {
+      // prettier-ignore
       const module = await import(/* webpackChunkName: "Python3" */ 'unicoen.ts/dist/interpreter/Python3/Python3Interpreter');
       this.interpreter = new module.Python3Interpreter();
     }
