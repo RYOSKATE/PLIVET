@@ -5265,10 +5265,10 @@ kleur@^3.0.2:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-konva@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/konva/-/konva-2.6.0.tgz#43165b95e32a4378ce532d9113c914f4998409c3"
-  integrity sha512-LCOoavICTD9PYoAqtWo8sbxYtCiXdgEeY7vj/Sq8b2bwFmrQr9Ak0RkD4/jxAf5fcUQRL5e1zPLyfRpVndp20A==
+konva@3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-3.2.4.tgz#ca6f19d41f0870a2505cdf0de56facb888e30dc8"
+  integrity sha512-ej5Jj7OmqecjxJQn1p9twUZkesIIJrc3aJi9B3Wp7apg+IOzxuIL9Ynbzoj9j7F0uxqT+IExntnF8FYizPqUBQ==
 
 lcid@^1.0.0:
   version "1.0.0"
