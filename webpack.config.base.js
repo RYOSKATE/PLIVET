@@ -82,7 +82,8 @@ module.exports = {
             jQuery: "jquery"
         }),
         new ForkTsCheckerWebpackPlugin({
-            workers: ForkTsCheckerWebpackPlugin.TWO_CPUS_FREE,
+            // workers: ForkTsCheckerWebpackPlugin.TWO_CPUS_FREE,
+            useTypescriptIncrementalApi: true,
             tsconfig: path.resolve(__dirname, tsConfigFile),
             async: false,
             checkSyntacticErrors: true,
