@@ -3662,10 +3662,10 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-fork-ts-checker-webpack-plugin@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-1.1.0.tgz#b86ad22bd87cc243763e2bf384fe5192026238fc"
-  integrity sha512-2y0etlSxfJ17wfoC+dLDj/k9tZDcAJa5vqoiNGZTLr6NM8OzycDQDJhuY5BboPw4xrMG6syo4E4o9UkLWzd9qg==
+fork-ts-checker-webpack-plugin@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-1.2.0.tgz#2d0b0d94ef6a2479ac94f44cb9edfa9e8f1de160"
+  integrity sha512-JY+qctuwZkg25tt3GdX3q4MOAI4mddWTs4ugAZD3EhJ12P3K0xtg0wvU+MMRPNBP0zT1hvQXemT2xeeQ8DYSWg==
   dependencies:
     babel-code-frame "^6.22.0"
     chalk "^2.4.1"
@@ -8415,10 +8415,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.4.4:
-  version "3.4.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.4.tgz#aac4a08abecab8091a75f10842ffa0631818f785"
-  integrity sha512-xt5RsIRCEaf6+j9AyOBgvVuAec0i92rgCaS3S+UVf5Z/vF2Hvtsw08wtUTJqp4djwznoAgjSxeCcU4r+CcDBJA==
+typescript@3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
+  integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
 
 uglify-js@3.4.x, uglify-js@^3.1.4:
   version "3.4.9"
@@ -8711,10 +8711,10 @@ webpack-bundle-analyzer@3.3.2:
     opener "^1.5.1"
     ws "^6.0.0"
 
-webpack-cli@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.0.tgz#55c8a74cae1e88117f9dda3a801c7272e93ca318"
-  integrity sha512-t1M7G4z5FhHKJ92WRKwZ1rtvi7rHc0NZoZRbSkol0YKl4HvcC8+DsmGDmK7MmZxHSAetHagiOsjOB6MmzC2TUw==
+webpack-cli@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.1.tgz#98b0499c7138ba9ece8898bd99c4f007db59909d"
+  integrity sha512-c2inFU7SM0IttEgF7fK6AaUsbBnORRzminvbyRKS+NlbQHVZdCtzKBlavRL5359bFsywXGRAItA5di/IruC8mg==
   dependencies:
     chalk "^2.4.1"
     cross-spawn "^6.0.5"
