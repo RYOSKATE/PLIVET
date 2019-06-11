@@ -7116,10 +7116,10 @@ rc-animate@2.x:
     raf "^3.4.0"
     react-lifecycles-compat "^3.0.4"
 
-rc-slider@8.6.12:
-  version "8.6.12"
-  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-8.6.12.tgz#40bb0a6e35f13183f08a3e6aa9a2adbd8dabd39d"
-  integrity sha512-mfYRg7H/smb2MlbqAB+/a34e8PeVqAr7t7hrfSS5+0njuDin4qCwoUHkX1jygGeEwtMAdGJ3buE0wRW988R7Xw==
+rc-slider@8.6.13:
+  version "8.6.13"
+  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-8.6.13.tgz#88a8150c2dda6709f3f119135de11fba80af765b"
+  integrity sha512-fCUe8pPn8n9pq1ARX44nN2nzJoATtna4x/PdskUrxIvZXN8ja7HuceN/hq6kokZjo3FBD2B1yMZvZh6oi68l6Q==
   dependencies:
     babel-runtime "6.x"
     classnames "^2.2.5"
@@ -8989,10 +8989,10 @@ webpack-bundle-analyzer@3.3.2:
     opener "^1.5.1"
     ws "^6.0.0"
 
-webpack-cli@3.3.3:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.3.tgz#8b7587dee369a838eb4722f6cfa711c779011e5f"
-  integrity sha512-/qBxTvsxZ7bIFQtSa08QRY5BZuiJb27cbJM/nzmgXg9NEaudP20D7BruKKIuWfABqWoMEJQcNYYq/OxxSbPHlg==
+webpack-cli@3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.4.tgz#de27e281c48a897b8c219cb093e261d5f6afe44a"
+  integrity sha512-ubJGQEKMtBSpT+LiL5hXvn2GIOWiRWItR1DGUqJRhwRBeGhpRXjvF5f0erqdRJLErkfqS5/Ldkkedh4AL5Q1ZQ==
   dependencies:
     chalk "^2.4.1"
     cross-spawn "^6.0.5"
