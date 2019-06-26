@@ -48,7 +48,7 @@
     "@types/jquery": "3.3.30",
     "@types/rc-slider": "8.6.4",
     "@types/react": "16.8.22",
-    "@types/react-bootstrap": "0.32.17",
+    "@types/react-bootstrap": "0.32.18",
     "@types/react-dom": "16.8.4",
     "@types/react-event-listener": "0.4.9",
     "@types/react-numeric-input": "2.2.3",
