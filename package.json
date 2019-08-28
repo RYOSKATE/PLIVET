@@ -98,14 +98,14 @@
     "tslint-config-standard": "8.0.1",
     "tslint-loader": "3.5.4",
     "tslint-plugin-prettier": "2.0.1",
-    "typescript": "3.5.3",
+    "typescript": "3.6.2",
     "unicoen.ts": "0.4.1",
     "url-loader": "1.1.2",
     "vector2d": "3.0.0",
-    "webpack": "4.39.2",
+    "webpack": "4.39.3",
     "webpack-bundle-analyzer": "3.4.1",
     "webpack-cli": "3.3.7",
     "webpack-dev-server": "3.8.0",
-    "webpack-merge": "4.2.1"
+    "webpack-merge": "4.2.2"
   }
 }
