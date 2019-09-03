@@ -7338,10 +7338,10 @@ rc-animate@2.x:
     raf "^3.4.0"
     react-lifecycles-compat "^3.0.4"
 
-rc-slider@8.6.13:
-  version "8.6.13"
-  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-8.6.13.tgz#88a8150c2dda6709f3f119135de11fba80af765b"
-  integrity sha512-fCUe8pPn8n9pq1ARX44nN2nzJoATtna4x/PdskUrxIvZXN8ja7HuceN/hq6kokZjo3FBD2B1yMZvZh6oi68l6Q==
+rc-slider@8.7.0:
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-8.7.0.tgz#3fe364fa4815c9357587101062547dfa5933be4e"
+  integrity sha512-LBjKbTNDPpLMNUM3WQuuU4IIXZSafUDkqYjyQ0E8cKd4SuP+SBbaPARtpOA/MfJlOjQUgSzYqYy5999eBOOI7Q==
   dependencies:
     babel-runtime "6.x"
     classnames "^2.2.5"

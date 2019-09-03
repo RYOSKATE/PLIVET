@@ -77,7 +77,7 @@
     "lint-staged": "8.2.1",
     "popper.js": "1.15.0",
     "prettier": "1.18.2",
-    "rc-slider": "8.6.13",
+    "rc-slider": "8.7.0",
     "react": "16.9.0",
     "react-ace": "6.6.0",
     "react-bootstrap": "0.32.4",
