@@ -3,7 +3,7 @@ import { ExecState } from 'unicoen.ts/dist/interpreter/Engine/ExecState';
 import { Stack } from 'unicoen.ts/dist/interpreter/Engine/Stack';
 import { Vector } from 'vector2d';
 import { signal } from '../emitter';
-import Hashids from 'hashids';
+import Hashids from 'hashids/cjs';
 import stringHash from 'string-hash';
 
 export type CanvasRow = CanvasCell[];

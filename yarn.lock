@@ -1100,13 +1100,6 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/hashids@1.0.30":
-  version "1.0.30"
-  resolved "https://registry.yarnpkg.com/@types/hashids/-/hashids-1.0.30.tgz#c0a056b25c5b13c80bf330fb8d379ac4d4049999"
-  integrity sha512-ESXJxz/GRY+SGa3n0WuWZLR0xM3k8LTr4+2xOoj/a0ZThglF/UfEeKVaMQNNFvFQ+mw3ng8LbC3gmJx/GmR5EQ==
-  dependencies:
-    "@types/node" "*"
-
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
