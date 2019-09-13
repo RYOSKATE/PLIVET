@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn deduplicate && yarn install && lint-staged && yarn build:prod && git add docs"
+      "pre-commit": "yarn deduplicate && yarn install && yarn test && lint-staged && yarn build:prod && git add docs"
     }
   },
   "lint-staged": {
