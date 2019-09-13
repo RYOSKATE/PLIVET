@@ -1,7 +1,7 @@
 import * as React from 'react';
 // tslint:disable-next-line:import-name
 import Select from 'react-select';
-import { ValueType } from 'react-select/lib/types';
+import { ValueType } from 'react-select/src/types';
 import { signal, event } from '../emitter';
 
 type OptionImple = { value: string; label: string };
