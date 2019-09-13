@@ -74,7 +74,7 @@
     "jest": "24.9.0",
     "jquery": "3.4.1",
     "konva": "3.4.1",
-    "lint-staged": "8.2.1",
+    "lint-staged": "9.2.5",
     "popper.js": "1.15.0",
     "prettier": "1.18.2",
     "rc-slider": "8.7.1",
