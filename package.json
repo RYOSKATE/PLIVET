@@ -100,7 +100,7 @@
     "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.6.3",
     "unicoen.ts": "0.4.1",
-    "url-loader": "1.1.2",
+    "url-loader": "2.1.0",
     "vector2d": "3.0.0",
     "webpack": "4.39.3",
     "webpack-bundle-analyzer": "3.4.1",
