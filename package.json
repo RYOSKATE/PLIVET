@@ -89,7 +89,7 @@
     "react-select": "2.4.4",
     "react-test-renderer": "16.9.0",
     "string-hash": "1.1.3",
-    "style-loader": "0.23.1",
+    "style-loader": "1.0.0",
     "thread-loader": "2.1.3",
     "ts-jest": "24.0.2",
     "ts-node": "8.3.0",
