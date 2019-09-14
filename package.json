@@ -86,7 +86,7 @@
     "react-container-dimensions": "1.4.1",
     "react-dom": "16.9.0",
     "react-download-link": "2.2.0",
-    "react-konva": "16.8.6",
+    "react-konva": "16.9.0-0",
     "react-numeric-input": "2.2.3",
     "react-select": "3.0.4",
     "react-test-renderer": "16.9.0",
