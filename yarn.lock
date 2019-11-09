@@ -4384,10 +4384,10 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-hashids@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/hashids/-/hashids-2.0.1.tgz#cdee93b6de1a6f941c955084fe82658c4fba28da"
-  integrity sha512-Hr1lPEGhCkZSniYj9jAj8gQtcTBKNhf/tF14R1tu3zvIcwCT89/ucHEyObSIUZ42Y30SlIfOt7Sq0Uw+rhs6iQ==
+hashids@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/hashids/-/hashids-2.1.0.tgz#96eec6de3081a76dcd839650a6a26e6081e729d3"
+  integrity sha512-N53K2p7TrwKLNHKHcEDH+qpiAgO9JfyPEg8Tfy4fB9AcVhwxlTanJ55HVV9BQJQ6ajM1Wfmtl2wgKuEbcucolw==
 
 he@1.2.x:
   version "1.2.0"
@@ -5601,10 +5601,10 @@ kleur@^3.0.2:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-konva@4.0.16:
-  version "4.0.16"
-  resolved "https://registry.yarnpkg.com/konva/-/konva-4.0.16.tgz#be1b86a63b4035315b6993311488b0fa333bb127"
-  integrity sha512-2TkYbNa350KCYe8OuM0Dqx/yf1wJ96rJuezLQfa+dipC4ptdZQJH692Mh83HXxoQLWet/V2dpOVUlASiEPMNNQ==
+konva@4.0.17:
+  version "4.0.17"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-4.0.17.tgz#7021300a6531077ac1f447e5286bd0c20250806b"
+  integrity sha512-vrEm/iA7oPihPZNTfPnHcttMI7+Ad4rm98+YERRavtZSbSpChAC6iK58+IkJs37lxXUWrmTuv8+B1chAiXLzuQ==
 
 lcid@^2.0.0:
   version "2.0.0"
@@ -6989,10 +6989,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier@1.18.2:
-  version "1.18.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
-  integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
+prettier@1.19.1:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
+  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
 
 pretty-error@^2.0.2:
   version "2.1.1"
