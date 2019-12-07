@@ -28,6 +28,11 @@ Demo page is here.
 
 ## For Developer
 
+### Required
+
+* node.js >= 10.13.0
+* yarn or npm
+
 ### Setup environment
 
 * Install node packages
@@ -42,4 +47,4 @@ Demo page is here.
 yarn build
 ```
 
-to update `docs/` by webpack.
+to update `bist/` by webpack.
