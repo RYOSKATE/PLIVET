@@ -31,7 +31,10 @@ export default class Footer extends React.Component<Props, State> {
 
   renderCopyRight() {
     return (
-      <span>PLIVET&nbsp;&copy;&nbsp;{this.getYear()}&nbsp; @RYOSKATE</span>
+      <span>
+        PLIVET&nbsp;v{require('../../package.json').version}&nbsp;&copy;&nbsp;
+        {this.getYear()}&nbsp; @RYOSKATE
+      </span>
     );
   }
 
