@@ -10,7 +10,7 @@
   },
   "scripts": {
     "ts-lint": "tslint --fix 'src/**/*.tsx'",
-    "start": "cross-env NODE_ENV=dev webpack-dev-server --config webpack.config.dev.js && opener http://localhost:8080",
+    "start": "opener http://localhost:8080 && cross-env NODE_ENV=dev webpack-dev-server --config webpack.config.dev.js",
     "build": "yarn clean && cross-env NODE_ENV=prod webpack --config webpack.config.js && yarn license",
     "license": "license-list-html -o ./dist/licenses.html -a RYOSKATE",
     "test": "jest",
