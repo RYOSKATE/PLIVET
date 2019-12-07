@@ -12,7 +12,7 @@ module.exports = {
     output: {
         filename: 'js/[name].js',// 仕上がりファイルの置き場
         chunkFilename: 'js/[name].bundle.js',
-        path: path.resolve(__dirname, 'docs')   // 出力ディレクトリの指定の絶対パス
+        path: path.resolve(__dirname, 'dist')   // 出力ディレクトリの指定の絶対パス
     },
     optimization: {
         namedChunks: true,
