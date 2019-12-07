@@ -5,9 +5,12 @@
   "main": "index.js",
   "author": "",
   "license": "MIT",
+  "engines" : { 
+    "node" : ">= 10.13.0"
+  },
   "scripts": {
     "ts-lint": "tslint --fix 'src/**/*.tsx'",
-    "start": "cross-env NODE_ENV=dev webpack-dev-server --config webpack.config.dev.js",
+    "start": "cross-env NODE_ENV=dev webpack-dev-server --config webpack.config.dev.js && opener http://localhost:8080",
     "build": "yarn clean && cross-env NODE_ENV=prod webpack --config webpack.config.js && yarn license",
     "license": "license-list-html -o ./dist/licenses.html -a RYOSKATE",
     "test": "jest",
@@ -78,6 +81,7 @@
     "konva": "4.0.18",
     "license-list-html": "1.0.6",
     "lint-staged": "9.5.0",
+    "opener": "1.5.1",
     "popper.js": "1.16.0",
     "prettier": "1.19.1",
     "rc-slider": "8.7.1",
