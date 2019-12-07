@@ -5429,7 +5429,7 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-license-list-html@^1.0.6:
+license-list-html@1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/license-list-html/-/license-list-html-1.0.6.tgz#3487f97d79ad589dfa8deeccdfd169ccdd632145"
   integrity sha512-En+vXZaPO2D2lFan6NoBfR+nmBttK664YP3SJhZ+zDzWszkgT7fElTNvuwzET2xnNS7+7vvVRl0Lkni0RQ8KNw==
@@ -7855,7 +7855,7 @@ shellwords@^0.1.1:
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
-shx@^0.3.2:
+shx@0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/shx/-/shx-0.3.2.tgz#40501ce14eb5e0cbcac7ddbd4b325563aad8c123"
   integrity sha512-aS0mWtW3T2sHAenrSrip2XGv39O9dXIFUqxAEWHEOS1ePtGIBavdPJY1kE2IHl14V/4iCbUiNDPGdyYTtmhSoA==
