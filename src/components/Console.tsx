@@ -2,9 +2,9 @@ import * as React from 'react';
 // tslint:disable-next-line:import-name
 import AceEditor from 'react-ace';
 
-import 'brace/mode/text';
-import 'brace/theme/textmate';
-import 'brace/theme/monokai';
+import 'ace-builds/src-noconflict/mode-text';
+import 'ace-builds/src-noconflict/theme-textmate';
+import 'ace-builds/src-noconflict/theme-monokai';
 
 import '../css/console.css';
 import { slot, signal } from './emitter';

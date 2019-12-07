@@ -6,15 +6,15 @@ import Checkbox from 'react-bootstrap/lib/Checkbox';
 // tslint:disable-next-line:import-name
 import AceEditor from 'react-ace';
 
-import 'brace/mode/c_cpp';
-import 'brace/snippets/c_cpp';
-import 'brace/mode/java';
-import 'brace/snippets/java';
-import 'brace/mode/python';
-import 'brace/snippets/python';
-import 'brace/theme/textmate';
-import 'brace/theme/monokai';
-import 'brace/ext/language_tools';
+import 'ace-builds/src-noconflict/mode-c_cpp';
+import 'ace-builds/src-noconflict/mode-java';
+import 'ace-builds/src-noconflict/mode-python';
+import 'ace-builds/src-noconflict/snippets/c_cpp';
+import 'ace-builds/src-noconflict/snippets/java';
+import 'ace-builds/src-noconflict/snippets/python';
+import 'ace-builds/src-noconflict/theme-textmate';
+import 'ace-builds/src-noconflict/theme-monokai';
+import 'ace-builds/src-min-noconflict/ext-language_tools';
 
 import '../css/editor.css';
 import { signal, slot } from './emitter';
