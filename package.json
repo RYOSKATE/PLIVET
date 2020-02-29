@@ -106,7 +106,7 @@
     "tslint-config-standard": "9.0.0",
     "tslint-loader": "3.5.4",
     "tslint-plugin-prettier": "2.1.0",
-    "typescript": "3.8.2",
+    "typescript": "3.8.3",
     "unicoen.ts": "0.4.1",
     "url-loader": "3.0.0",
     "vector2d": "3.0.0",
@@ -115,6 +115,6 @@
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.10.3",
     "webpack-merge": "4.2.2",
-    "yarn-deduplicate": "1.1.1"
+    "yarn-deduplicate": "1.2.0"
   }
 }
