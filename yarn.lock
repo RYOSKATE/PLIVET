@@ -4047,10 +4047,10 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-fork-ts-checker-webpack-plugin@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-4.0.5.tgz#1982b464cb8a44d224940a95a0d075c8bbd700bf"
-  integrity sha512-7juf7VGQ4GD7beQI2vsHlWME4H7cabXn4+zYzvWTOYQUjn3L+3tWQe8j9KnVOpdCf+1PoSvYMRT2A2kltfGLtQ==
+fork-ts-checker-webpack-plugin@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-4.1.0.tgz#62bffe704426770fee33f15f0c0d56c86297fefd"
+  integrity sha512-2DLwUVUR/AdNmMD2utfmSR8r4qHRFhnfL6QQDQS5q4g5uBZzXYDgg8MXPIbu0HzyLjyvbogqjBNKILG5fufwzg==
   dependencies:
     babel-code-frame "^6.22.0"
     chalk "^2.4.1"
@@ -7084,7 +7084,7 @@ prop-types-extra@^1.0.1:
     react-is "^16.3.2"
     warning "^3.0.0"
 
-prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -7261,14 +7261,13 @@ rc-animate@^2.10.2:
     rc-util "^4.15.3"
     react-lifecycles-compat "^3.0.4"
 
-rc-slider@9.2.2:
-  version "9.2.2"
-  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-9.2.2.tgz#852ed38abda337b98aed5ada2090538d98446cc2"
-  integrity sha512-WwdNHb/cvnQXMhp8cRhxOM0pGnVG4fPoaFE31yVkyJUAZiHq3siQgwzAeYl11fyszwhrEXkpGU7tEAfClh0AaQ==
+rc-slider@9.2.3:
+  version "9.2.3"
+  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-9.2.3.tgz#b80f03ada71ef3ec35dfcb67d2e0f87d84ce2781"
+  integrity sha512-mlERrweLA4KNFvO0dkhQv3Du0Emq7DyAFV6N7jgrAwfUZsX4eB1T1iJWYMtsguHXbMyje+PACAqwsrfhZIN0bQ==
   dependencies:
     babel-runtime "6.x"
     classnames "^2.2.5"
-    prop-types "^15.5.4"
     rc-tooltip "^4.0.0"
     rc-util "^4.0.4"
     shallowequal "^1.1.0"
