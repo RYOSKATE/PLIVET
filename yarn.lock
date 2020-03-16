@@ -7361,10 +7361,10 @@ react-dom@16.13.0:
     prop-types "^15.6.2"
     scheduler "^0.19.0"
 
-react-download-link@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-download-link/-/react-download-link-2.2.0.tgz#52247050fb063515cf52b9f4f9a94c32a9e200a9"
-  integrity sha512-zscBZyv+u11LemJBow/iBSkR/Ta/iJrX4VoTTHhNgpIdRNwujfl5Cg9vxAnktTbJP4Me6qW4RXLsmej7B1svUw==
+react-download-link@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-download-link/-/react-download-link-2.3.0.tgz#5b03e475bf12e6587d4a003ed146ce313f811c0d"
+  integrity sha512-0aoj2DJFBfiD9jtdIn+WAseO1GSYmgkB5y5Ljt3DeC7j1RUlx0rR5y4S+wZwdxGhvgFogCzyh5Pa4W4YE+Pg/Q==
   dependencies:
     prop-types "^15.6.0"
 
