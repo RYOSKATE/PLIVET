@@ -19,7 +19,7 @@ export default {
     'Users can write source code in the editor. Clicking on the execution control buttons initiates the step execution.',
     'The I/O window shows the content of the standard output written by the program (e.g., printf) and accepts standard input (e.g., scanf).',
     "Canvas shows the program's execution status using tables and figures.",
-    'PVC.js adaptively changes its layout to correspond with the size of the browser window.'
+    'PVC.js adaptively changes its layout to correspond with the size of the browser window.',
   ],
   uploadFile: 'The uploaded file will be displayed here.',
   warning: 'Warning!',
@@ -131,5 +131,5 @@ public class Main {
     for j in range(p + c):
       a[j] = b[j]
   print(a[0])
-`
+`,
 };

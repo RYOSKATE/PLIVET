@@ -100,7 +100,7 @@ class Server {
   }
 
   public async upload(files: FileList) {
-    await Promise.all(Array.from(files).map(file => this.addFile(file)));
+    await Promise.all(Array.from(files).map((file) => this.addFile(file)));
     return this.files;
   }
 
@@ -115,7 +115,7 @@ class Server {
       sourcecode,
       stdinText,
       lineNumOfBreakpoint,
-      progLang
+      progLang,
     } = request;
 
     switch (controlEvent) {
@@ -163,7 +163,7 @@ class Server {
       debugState: 'First',
       step: this.count,
       errors: [],
-      files: this.files
+      files: this.files,
     };
     return res;
   }
@@ -180,7 +180,7 @@ class Server {
       output: '',
       step: this.count,
       errors: [],
-      files: this.files
+      files: this.files,
     };
     return ret;
   }
@@ -196,7 +196,7 @@ class Server {
       debugState: 'First',
       step: this.count,
       errors: [],
-      files: this.files
+      files: this.files,
     };
     return ret;
   }
@@ -214,7 +214,7 @@ class Server {
       debugState: 'Debugging',
       step: this.count,
       errors: [],
-      files: this.files
+      files: this.files,
     };
     return ret;
   }
@@ -231,7 +231,7 @@ class Server {
         debugState: 'Debugging',
         step: this.count,
         errors: [],
-        files: this.files
+        files: this.files,
       };
       return ret;
     }
@@ -270,7 +270,7 @@ class Server {
         debugState,
         step: this.count,
         errors: [],
-        files: this.files
+        files: this.files,
       };
       return ret;
     }
@@ -283,7 +283,7 @@ class Server {
       debugState: 'EOF',
       step: this.count,
       errors: [],
-      files: this.files
+      files: this.files,
     };
     return ret;
   }
@@ -323,7 +323,7 @@ class Server {
       debugState,
       step: currentCount,
       errors: [],
-      files: this.files
+      files: this.files,
     };
   }
 
@@ -349,7 +349,7 @@ class Server {
       debugState: 'Stop',
       output: '',
       step: this.count,
-      files: this.files
+      files: this.files,
     };
     return ret;
   }

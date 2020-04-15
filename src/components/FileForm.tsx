@@ -29,7 +29,7 @@ export default class FileForm extends React.Component<Props, State> {
   }
 
   async onFileSelected(e: React.FormEvent<FormControl>) {
-    const target: HTMLInputElement = e.currentTarget as any;
+    const target: HTMLInputElement = e.currentTarget;
     const files: FileList | null = target.files;
     if (files === null) {
       return;
