@@ -33,7 +33,7 @@ export default class ScaleSpin extends React.Component<Props, State> {
               margin: '0px 5px 5px 10px',
               padding: '2px 2px 2px 2px',
               borderRadius: '6px 3px 3px 6px',
-              fontSize: 16
+              fontSize: 16,
             },
             input: {
               width: '40px',
@@ -41,8 +41,8 @@ export default class ScaleSpin extends React.Component<Props, State> {
               padding: '0.1ex 1ex',
               border: '1px solid #ccc',
               marginRight: 4,
-              display: 'block'
-            }
+              display: 'block',
+            },
           }}
         />
       </React.Fragment>

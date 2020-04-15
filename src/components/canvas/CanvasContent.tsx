@@ -23,14 +23,14 @@ export default class CanvasContent extends React.Component<Props, State> {
   }
 
   makeStacks(canvasStacks: CanvasStack[]) {
-    const list = canvasStacks.map(canvasStack => (
+    const list = canvasStacks.map((canvasStack) => (
       <StackRect key={canvasStack.key} canvasStack={canvasStack} />
     ));
     return list;
   }
 
   makeArrows(canvasArrows: CanvasArrow[]) {
-    const list = canvasArrows.map(canvasArrow => {
+    const list = canvasArrows.map((canvasArrow) => {
       const { from, mid, to, key, color } = canvasArrow;
       const rgbaColor = hexToRgba(color);
       return (

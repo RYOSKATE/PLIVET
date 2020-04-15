@@ -17,7 +17,7 @@ export default class ScaleSlider extends React.Component<Props, State> {
     this.marks = {
       0.1: '0.1',
       1.0: '1.0',
-      2.0: '2.0'
+      2.0: '2.0',
     };
   }
   render() {

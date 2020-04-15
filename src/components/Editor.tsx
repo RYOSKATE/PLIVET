@@ -23,7 +23,7 @@ import {
   CONTROL_EVENT,
   server,
   Response,
-  DEBUG_STATE
+  DEBUG_STATE,
 } from '../server';
 import translate from '../locales/translate';
 import { ExecState } from 'unicoen.ts/dist/interpreter/Engine/ExecState';
@@ -127,7 +127,7 @@ export default class Editor extends React.Component<Props, State> {
       if (this.lineNumOfBreakpoint.includes(row)) {
         session.clearBreakpoint(row);
         this.lineNumOfBreakpoint = this.lineNumOfBreakpoint.filter(
-          n => n !== row
+          (n) => n !== row
         );
       } else {
         session.setBreakpoint(row, 'ace_breakpoint');
@@ -139,7 +139,7 @@ export default class Editor extends React.Component<Props, State> {
 
   sourceCodeKey = (prog: string) =>
     'sourceCode' +
-    prog.replace(/_/g, '').replace(/^[a-z]/g, char => char.toUpperCase());
+    prog.replace(/_/g, '').replace(/^[a-z]/g, (char) => char.toUpperCase());
 
   componentWillReceiveProps(nextProps: Props) {
     const { lang, progLang } = this.props;
@@ -164,7 +164,7 @@ export default class Editor extends React.Component<Props, State> {
       controlEvent,
       stdinText,
       lineNumOfBreakpoint,
-      progLang
+      progLang,
     };
     if (controlEvent === 'SyntaxCheck') {
       server
@@ -173,7 +173,7 @@ export default class Editor extends React.Component<Props, State> {
           const { errors } = response;
           this.setSyntaxError(errors);
         })
-        .catch(e => {
+        .catch((e) => {
           console.log(e);
           alert(e);
         });
@@ -195,7 +195,7 @@ export default class Editor extends React.Component<Props, State> {
         .then((response: Response) => {
           this.recieve(response);
         })
-        .catch(e => {
+        .catch((e) => {
           console.log(e);
           alert(e);
         });
@@ -210,7 +210,7 @@ export default class Editor extends React.Component<Props, State> {
         output,
         step,
         sourcecode,
-        files
+        files,
       } = response;
       this.isDebugging = debugState !== 'Stop';
       this.sentSourcecode = sourcecode;
@@ -263,7 +263,7 @@ export default class Editor extends React.Component<Props, State> {
         row: error.line - 1,
         column: error.charPositionInLine - 1,
         text: error.getMsg(),
-        type: 'error'
+        type: 'error',
       };
     });
     const session: AceAjax.IEditSession = editor.getSession();
@@ -303,13 +303,13 @@ export default class Editor extends React.Component<Props, State> {
         fontSize={fontSize}
         tabSize={2}
         editorProps={{
-          $blockScrolling: Infinity
+          $blockScrolling: Infinity,
         }}
         setOptions={{
           enableBasicAutocompletion: true,
           enableLiveAutocompletion: true,
           showLineNumbers: true,
-          readOnly: false
+          readOnly: false,
         }}
         style={{ height: '62vh', width: 'auto' }}
         className="editorMain"
@@ -322,7 +322,7 @@ export default class Editor extends React.Component<Props, State> {
           };
           setTimeout(() => delaySyntaxCheck(text), 1000);
         }}
-        onBeforeLoad={ace => (this.ace = ace)}
+        onBeforeLoad={(ace) => (this.ace = ace)}
       />
     );
   }
@@ -378,7 +378,7 @@ export default class Editor extends React.Component<Props, State> {
           </Button>
           <Checkbox
             validationState="warning"
-            inputRef={ref => (this.checkbox = ref)}
+            inputRef={(ref) => (this.checkbox = ref)}
           >
             {rememberCommand}
           </Checkbox>

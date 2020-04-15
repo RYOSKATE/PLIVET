@@ -29,7 +29,7 @@ export default class CtrlButtons extends React.Component<Props, State> {
       BackAll: false,
       StepBack: false,
       Step: true,
-      StepAll: true
+      StepAll: true,
     };
   }
 
@@ -42,7 +42,7 @@ export default class CtrlButtons extends React.Component<Props, State> {
           BackAll: false,
           StepBack: false,
           Step: true,
-          StepAll: true
+          StepAll: true,
         });
         break;
       case 'First':
@@ -52,7 +52,7 @@ export default class CtrlButtons extends React.Component<Props, State> {
           BackAll: false,
           StepBack: false,
           Step: true,
-          StepAll: true
+          StepAll: true,
         });
         break;
       case 'stdin':
@@ -60,7 +60,7 @@ export default class CtrlButtons extends React.Component<Props, State> {
           BackAll: false,
           StepBack: false,
           Step: true,
-          StepAll: true
+          StepAll: true,
         });
         break;
       case 'Debugging':
@@ -68,7 +68,7 @@ export default class CtrlButtons extends React.Component<Props, State> {
           BackAll: true,
           StepBack: true,
           Step: true,
-          StepAll: true
+          StepAll: true,
         });
         break;
       case 'Executing':
@@ -76,7 +76,7 @@ export default class CtrlButtons extends React.Component<Props, State> {
           BackAll: false,
           StepBack: false,
           Step: false,
-          StepAll: false
+          StepAll: false,
         });
         break;
       case 'EOF':
@@ -86,7 +86,7 @@ export default class CtrlButtons extends React.Component<Props, State> {
           BackAll: true,
           StepBack: true,
           Step: false,
-          StepAll: false
+          StepAll: false,
         });
         break;
       default:

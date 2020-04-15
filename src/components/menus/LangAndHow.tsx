@@ -34,7 +34,7 @@ export default class LangAndHow extends React.Component<Props, State> {
             signal="changeLang"
             options={[
               { value: 'ja', label: '日本語' },
-              { value: 'en', label: 'English' }
+              { value: 'en', label: 'English' },
             ]}
           />
         </Col>
@@ -44,7 +44,7 @@ export default class LangAndHow extends React.Component<Props, State> {
             options={[
               { value: 'c_cpp', label: 'C' },
               { value: 'java', label: 'Java(WIP)' },
-              { value: 'python', label: 'Python(WIP)' }
+              { value: 'python', label: 'Python(WIP)' },
             ]}
             isDisabled={this.state.isDebugging}
           />

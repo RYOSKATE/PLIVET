@@ -61,7 +61,7 @@ export default class Console extends React.Component<Props, State> {
           enableLiveAutocompletion: false,
           showLineNumbers: false,
           readOnly: this.state.isReadOnly,
-          showGutter: false
+          showGutter: false,
         }}
         style={{ height: '18vh', width: 'auto' }}
         className="console"
