@@ -78,7 +78,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "25.5.4",
     "jquery": "3.5.1",
-    "konva": "4.2.2",
+    "konva": "6.0.0",
     "license-list-html": "1.0.6",
     "lint-staged": "10.2.2",
     "opener": "1.5.1",
