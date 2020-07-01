@@ -12,5 +12,5 @@
     "groupName": "all dependencies"
   },
   "automergeType": "branch-push",
-  "ignoreDeps": ["bootstrap", "@types/bootstrap"]
+  "ignoreDeps": ["bootstrap", "@types/bootstrap", "rc-slider", "@types/rc-slider"]
 }

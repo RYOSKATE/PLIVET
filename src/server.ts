@@ -310,7 +310,7 @@ class Server {
           }
         }
       }
-      this.timer = setTimeout(loop.bind(this), 1);
+      this.timer = global.setTimeout(loop.bind(this), 1);
     };
     loop();
     const execState = this.stateHistory[currentCount];
