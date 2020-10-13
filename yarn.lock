@@ -1423,10 +1423,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@types/ace@0.0.43":
-  version "0.0.43"
-  resolved "https://registry.yarnpkg.com/@types/ace/-/ace-0.0.43.tgz#9f0916174b6060dabbccd36ba4868ea769a1c633"
-  integrity sha512-eQdX8AQ7CfSHym07MZMBQ8FKUj9AZ2Wcc26W5Ct8J4KOMjFY6SFUaf2YA8YHBut0Fwl//2kZ+0GLZNp+NQNRIA==
+"@types/ace@0.0.44":
+  version "0.0.44"
+  resolved "https://registry.yarnpkg.com/@types/ace/-/ace-0.0.44.tgz#486919a51cc9ee6cc5f354888e6581e61d64a4b7"
+  integrity sha512-jDEkKhBrVWm7m23Dqttj6189+uMhRSFINjH+pS/Fu7KeXB8NsfoX/8QvmmIdV8JvWqVsDP1Pf6cOm3jOGhOnKQ==
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -1569,10 +1569,10 @@
   dependencies:
     "@types/sizzle" "*"
 
-"@types/jquery@3.5.2":
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.2.tgz#e17c1756ecf7bbb431766c6761674a5d1de16579"
-  integrity sha512-+MFOdKF5Zr41t3y2wfzJvK1PrUK0KtPLAFwYownp/0nCoMIANDDu5aFSpWfb8S0ZajCSNeaBnMrBGxksXK5yeg==
+"@types/jquery@3.5.3":
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.3.tgz#adcc647e4c675bd9ebae7fb980e9ca75d58ee8c7"
+  integrity sha512-IENpHTjGksr2wQS6ZO8eMIE0tIB22Ywg+n3/yAWCa56VSZ26phcwAbFdh9+VNUWk7e83qB27QLax3Rf4G92Y9A==
   dependencies:
     "@types/sizzle" "*"
 
