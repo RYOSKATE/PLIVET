@@ -63,7 +63,7 @@
     "bootstrap": "^3.4.1",
     "core-js": "3.8.0",
     "cross-env": "7.0.2",
-    "css-loader": "3.6.0",
+    "css-loader": "5.0.2",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.5",
     "events": "3.2.0",
