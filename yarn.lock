@@ -1463,15 +1463,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*":
-  version "13.11.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.11.1.tgz#49a2a83df9d26daacead30d0ccc8762b128d53c7"
-  integrity sha512-eWQGP3qtxwL8FGneRrC5DwrJLGN4/dH1clNTuLfN81HCrxVtxRjygDTUoZJ5ASlDEeo0ppYFQjQIlXhtXpOn6g==
-
-"@types/node@^9.6.32":
-  version "9.6.55"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.55.tgz#7cc1358c9c18e71f6c020e410962971863232cf5"
-  integrity sha512-e/5tg8Ok0gSrN6pvHphnwTK0/CD9VPZrtZqpvvpEFAtfs+ZntusgGaWkf2lSEq1OFe2EDPeUMiMVpy4nZpJ4AQ==
+"@types/node@*", "@types/node@14.14.35":
+  version "14.14.35"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.35.tgz#42c953a4e2b18ab931f72477e7012172f4ffa313"
+  integrity sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -9336,12 +9331,12 @@ unicode-property-aliases-ecmascript@^1.0.4:
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.1.0.tgz#dd57a99f6207bedff4628abefb94c50db941c8f4"
   integrity sha512-PqSoPh/pWetQ2phoj5RLiaqIk4kCNwoV3CI+LfGmWLKI3rE3kl1h59XpX2BjgDrmbxD9ARtQobPGU1SguCYuQg==
 
-unicoen.ts@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/unicoen.ts/-/unicoen.ts-0.4.1.tgz#43b0a40bf8888a41bb4389411505a0cf5321dd55"
-  integrity sha512-PaxzwmbS5eYKxxPmvdZ53owkyi9Jli9cOtPe0VwezuYCH6z1gBuGBT1oZLo+NA7DJo/ScouX4GbXDL2jwlpXFw==
+unicoen.ts@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/unicoen.ts/-/unicoen.ts-0.5.0.tgz#202f2006ad356d4e2b317615a60a7afa0c21ec98"
+  integrity sha512-Fq6P5WkkIIHuSqncKQkD9q2ckcqlCrIA6Uh86vcJsE9iI8c2PqEl465lptfpQWJ24A7HW8LdTZyALDRMQHcuag==
   dependencies:
-    "@types/node" "^9.6.32"
+    "@types/node" "14.14.35"
     agh.sprintf "0.0.11"
     antlr4ts "^0.5.0-alpha.1"
     scanf "^1.0.2"
