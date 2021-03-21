@@ -1,17 +1,17 @@
 language: node_js
 
 node_js:
-  - 'node'
-  - '10.14.0'
+  - "stable"
+  - "10.20.1"
 
 dist: trusty
-sudo: false  
+sudo: false
 
 matrix:
   fast_finish: true
 
 branches:
-  only: 
+  only:
     - master
     - develop
 
