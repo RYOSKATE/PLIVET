@@ -5,8 +5,8 @@
   "main": "index.js",
   "author": "",
   "license": "MIT",
-  "engines" : { 
-    "node" : ">= 10.14.0"
+  "engines": {
+    "node": ">= 10.14.0"
   },
   "scripts": {
     "ts-lint": "tslint --fix 'src/**/*.tsx'",
@@ -100,13 +100,12 @@
     "style-loader": "2.0.0",
     "thread-loader": "3.0.1",
     "ts-jest": "25.5.1",
-    "ts-node": "8.10.2",
     "tslint": "6.1.3",
     "tslint-config-prettier": "1.18.0",
     "tslint-config-standard": "9.0.0",
     "tslint-loader": "3.5.4",
     "tslint-plugin-prettier": "2.3.0",
-    "typescript": "3.9.7",
+    "typescript": "4.1.5",
     "unicoen.ts": "0.4.1",
     "url-loader": "4.1.1",
     "vector2d": "3.0.0",
