@@ -30,7 +30,7 @@ Demo page is here.
 
 ### Required
 
-* node.js >= 10.20.1
+* node.js >= 10.20.1 <= 16.13.2
 * yarn or npm
 
 ### Setup environment
