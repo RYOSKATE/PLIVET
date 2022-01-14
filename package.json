@@ -68,7 +68,7 @@
     "enzyme-adapter-react-16": "1.15.5",
     "events": "3.2.0",
     "file-loader": "6.2.0",
-    "fork-ts-checker-webpack-plugin": "4.1.6",
+    "fork-ts-checker-webpack-plugin": "6.5.0",
     "happypack": "5.0.1",
     "hard-source-webpack-plugin": "0.13.1",
     "hashids": "2.2.2",
