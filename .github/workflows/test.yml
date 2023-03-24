@@ -2,18 +2,17 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [10.20.1, 12.x, 14.x, 16.x]
+        node-version: [16.13.2]
 
     steps:
       - uses: actions/checkout@v2
@@ -22,6 +21,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: yarn --frozen-lockfile --ignore-optional 
+        run: yarn --frozen-lockfile --ignore-optional
       - run: yarn run build
       - run: yarn run test

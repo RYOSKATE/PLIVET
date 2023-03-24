@@ -4,9 +4,10 @@ Programming Language Interpreter for Visualization of Execution Trace (PLIVET) i
 
 PLIVET supports;
 
-* C language
-* Java (now implementing)
-* Python (now implementing)
+- C language
+- Java (now implementing)
+- Python (now implementing)
+
 ## For User
 
 PLIVET can be used with most modern browsers.
@@ -30,18 +31,18 @@ Demo page is here.
 
 ### Required
 
-* node.js >= 10.20.1 <= 16.13.2
-* yarn or npm
+- node.js v16.13.2
+- yarn or npm
 
 ### Setup environment
 
-* Install node packages
+- Install node packages
 
- ```
- yarn
- ```
+```
+yarn
+```
 
-* After editing files in `src/`, 
+- After editing files in `src/`,
 
 ```
 yarn build
