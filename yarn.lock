@@ -1559,10 +1559,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-numeric-input@2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@types/react-numeric-input/-/react-numeric-input-2.2.3.tgz#fbb0e8f24a4775374eda9cdce2355679d40f9e92"
-  integrity sha512-TQtZ+0PM3/Pk15YYY3xJGOmfwETFQYHGydMaY42OvAbRTBmYJSmGPL7f/Yi/9FfXWb4m4T8FrZborccZX6VXDw==
+"@types/react-numeric-input@2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@types/react-numeric-input/-/react-numeric-input-2.2.4.tgz#524fa74626512409f28fe69c63d0f9f45943f9bd"
+  integrity sha512-T1p5pPr2legoXxzbcvp85/v70kKdQBtL7lTkc/sQf4BnF/RIAysNguVHv82xkJUtWHCB+X865NArFnHmjFa7rA==
   dependencies:
     "@types/react" "*"
 
