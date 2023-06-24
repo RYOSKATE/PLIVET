@@ -80,7 +80,7 @@
     "jquery": "3.5.1",
     "konva": "4.2.2",
     "license-list-html": "1.0.6",
-    "lint-staged": "10.5.2",
+    "lint-staged": "10.5.4",
     "opener": "1.5.2",
     "popper.js": "1.16.1",
     "prettier": "2.2.1",
