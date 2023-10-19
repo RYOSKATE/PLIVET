@@ -1882,10 +1882,10 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/enzyme@3.10.13":
-  version "3.10.13"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.13.tgz#332c0ed59b01f7b1c398c532a1c21a5feefabeb1"
-  integrity sha512-FCtoUhmFsud0Yx9fmZk179GkdZ4U9B0GFte64/Md+W/agx0L5SxsIIbhLBOxIb9y2UfBA4WQnaG1Od/UsUQs9Q==
+"@types/enzyme@3.10.15":
+  version "3.10.15"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.15.tgz#56d1167bb11a2c3f65af790de0cbb0e990b21489"
+  integrity sha512-Tdm2XXW7TfyKhb/ddSLMpj8W0UgxbCOOauFNeLJH7+KzsfOBrHF6XPctw11SwGoOPyUglYQpvMoQNFXOF0uTwg==
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "^16"
