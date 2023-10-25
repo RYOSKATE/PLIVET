@@ -48,7 +48,7 @@
     "@types/bootstrap": "^3.4.0",
     "@types/enzyme": "3.10.15",
     "@types/enzyme-adapter-react-16": "1.0.8",
-    "@types/events": "3.0.0",
+    "@types/events": "3.0.2",
     "@types/jest": "25.2.3",
     "@types/jquery": "3.5.18",
     "@types/rc-slider": "8.6.5",
