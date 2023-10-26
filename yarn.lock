@@ -2020,10 +2020,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-bootstrap@0.32.32":
-  version "0.32.32"
-  resolved "https://registry.yarnpkg.com/@types/react-bootstrap/-/react-bootstrap-0.32.32.tgz#bde80df93181e3fbba19bc7a1a273e35ffea8b8f"
-  integrity sha512-GM9UtV7v+C2F0rbqgIpMWdCKBMdX3PQURoJQobPO4vDAeFadcExNtKffi13/MjaAks+riJKVGyiMe+6OmDYT2w==
+"@types/react-bootstrap@0.32.34":
+  version "0.32.34"
+  resolved "https://registry.yarnpkg.com/@types/react-bootstrap/-/react-bootstrap-0.32.34.tgz#3103b4516e957d32e2fe49d4ac72f4564784cb05"
+  integrity sha512-Tx1EOJysc3hDmoVFsHz6IIMbF26nMaaki+CF6c7XA1TJ2g0/JYAXn2fObuNB559vflobRL/w6Ht1bBCiirpOjQ==
   dependencies:
     "@types/react" "*"
 
