@@ -2034,10 +2034,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-event-listener@0.4.12":
-  version "0.4.12"
-  resolved "https://registry.yarnpkg.com/@types/react-event-listener/-/react-event-listener-0.4.12.tgz#601b6b83e53fbea191cadf32175e4d9af6004e64"
-  integrity sha512-ilfwCBSnIfd55qhMTIYvEjoMVds8xXDgwoBd1CT1MjiZBmE8oEstjrHos5iI/pUmAGooalo9oEUBc79kXVuYlA==
+"@types/react-event-listener@0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@types/react-event-listener/-/react-event-listener-0.4.14.tgz#8089bcdb3c5333133849282db2f08a74557692ed"
+  integrity sha512-u9u5FCPamt467IRsuZAIoJgubsNweUf2RATfMxknGFGz4ThARH2lBTLZRoQmOEhIBXZ+N/wj3QBS8ZyGG9v2qg==
   dependencies:
     "@types/react" "*"
 
