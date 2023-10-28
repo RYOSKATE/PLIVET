@@ -2041,10 +2041,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-numeric-input@2.2.4":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@types/react-numeric-input/-/react-numeric-input-2.2.4.tgz#524fa74626512409f28fe69c63d0f9f45943f9bd"
-  integrity sha512-T1p5pPr2legoXxzbcvp85/v70kKdQBtL7lTkc/sQf4BnF/RIAysNguVHv82xkJUtWHCB+X865NArFnHmjFa7rA==
+"@types/react-numeric-input@2.2.6":
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/@types/react-numeric-input/-/react-numeric-input-2.2.6.tgz#43d7858a64c6879d784e6fc990e95cbdc87fc375"
+  integrity sha512-YswKVg6DBxad8HcAZ7J0CsHIkkVUzlX5w8CWZkiShxJSfInxInSjGjNScYIN51i+yGDnsHlVz96ktFy6GAtnQw==
   dependencies:
     "@types/react" "*"
 
