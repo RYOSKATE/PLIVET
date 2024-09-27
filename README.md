@@ -24,8 +24,9 @@ Demo page is here.
 
 ### Offline
 
+1. Switch to the [gh-pages branch](https://github.com/RYOSKATE/PLIVET/tree/gh-pages).
 1. Download this repository.
-1. Open `docs/index.html` by a modern browser.
+1. Open `index.html` by a modern browser.
 
 ## For Developer
 
