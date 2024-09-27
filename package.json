@@ -44,7 +44,7 @@
     "@babel/preset-env": "7.23.2",
     "@babel/preset-react": "7.22.15",
     "@babel/preset-typescript": "7.23.2",
-    "@types/ace": "0.0.50",
+    "@types/ace": "0.0.52",
     "@types/bootstrap": "^3.4.0",
     "@types/enzyme": "3.10.15",
     "@types/enzyme-adapter-react-16": "1.0.8",
