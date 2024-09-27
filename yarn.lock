@@ -1851,10 +1851,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@types/ace@0.0.50":
-  version "0.0.50"
-  resolved "https://registry.yarnpkg.com/@types/ace/-/ace-0.0.50.tgz#1da0e515648965624f23bc2537204c9f991206c2"
-  integrity sha512-kg6VGO7BX5tDnTK3Vhs4SZx7ILT8xG1i439GA/QSl5PQ4UKa7Jy1GW2dsRe0R3q8mH5/3LASGZ5fwaNuOAqutA==
+"@types/ace@0.0.52":
+  version "0.0.52"
+  resolved "https://registry.yarnpkg.com/@types/ace/-/ace-0.0.52.tgz#e530e7b85e5407ed3b8c987a3719692ac0d95d4c"
+  integrity sha512-YPF9S7fzpuyrxru+sG/rrTpZkC6gpHBPF14W3x70kqVOD+ks6jkYLapk4yceh36xej7K4HYxcyz9ZDQ2lTvwgQ==
 
 "@types/anymatch@*":
   version "1.3.1"
