@@ -2066,10 +2066,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-bootstrap@0.32.34":
-  version "0.32.34"
-  resolved "https://registry.yarnpkg.com/@types/react-bootstrap/-/react-bootstrap-0.32.34.tgz#3103b4516e957d32e2fe49d4ac72f4564784cb05"
-  integrity sha512-Tx1EOJysc3hDmoVFsHz6IIMbF26nMaaki+CF6c7XA1TJ2g0/JYAXn2fObuNB559vflobRL/w6Ht1bBCiirpOjQ==
+"@types/react-bootstrap@0.32.37":
+  version "0.32.37"
+  resolved "https://registry.yarnpkg.com/@types/react-bootstrap/-/react-bootstrap-0.32.37.tgz#ee4838a78fc6ddd4bd13abb243a1c6ab26ac06f2"
+  integrity sha512-CVHj++uxsj1pRnM3RQ/NAXcWj+JwJZ3MqQ28sS1OQUD1sI2gRlbeAjRT+ak2nuwL+CY+gtnIsMaIDq0RNfN0PA==
   dependencies:
     "@types/react" "*"
 
