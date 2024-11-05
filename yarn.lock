@@ -2087,10 +2087,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-numeric-input@2.2.6":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@types/react-numeric-input/-/react-numeric-input-2.2.6.tgz#43d7858a64c6879d784e6fc990e95cbdc87fc375"
-  integrity sha512-YswKVg6DBxad8HcAZ7J0CsHIkkVUzlX5w8CWZkiShxJSfInxInSjGjNScYIN51i+yGDnsHlVz96ktFy6GAtnQw==
+"@types/react-numeric-input@2.2.7":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@types/react-numeric-input/-/react-numeric-input-2.2.7.tgz#f22c66a035a017108778603126a6d5033ec45127"
+  integrity sha512-C55RyZCEXxjB13skjVkvxOc6+vTVK4v2vR1hS+foANbntYDz2cIF1zTD90B4oN5qxJsGHQ4ZRN0T381Y3T6YDg==
   dependencies:
     "@types/react" "*"
 
