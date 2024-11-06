@@ -2148,10 +2148,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.0.tgz#7036640b4e21cc2f259ae826ce843d277dad8cff"
   integrity sha512-RJJrrySY7A8havqpGObOB4W92QXKJo63/jFLLgpvOtsGUqbQZ9Sbgl35KMm1DjC6j7AvmmU2bIno+3IyEaemaw==
 
-"@types/string-hash@1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@types/string-hash/-/string-hash-1.1.2.tgz#a75d30003a42fba4e5d3fb13ff92c62a1e988733"
-  integrity sha512-CtVwNz47vNgl2qVUnX29IkZaBr5XbscAL30cKFwU8HgbCB3cQ1OuY/COl4MrvWbJq0xfmB7mo/nZTng+bi4TDg==
+"@types/string-hash@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@types/string-hash/-/string-hash-1.1.3.tgz#8d9a73cf25574d45daf11e3ae2bf6b50e69aa212"
+  integrity sha512-p6skq756fJWiA59g2Uss+cMl6tpoDGuCBuxG0SI1t0NwJmYOU66LAMS6QiCgu7cUh3/hYCaMl5phcCW1JP5wOA==
 
 "@types/tapable@*", "@types/tapable@^1.0.5":
   version "1.0.5"
