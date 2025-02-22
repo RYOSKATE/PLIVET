@@ -2,7 +2,7 @@ language: node_js
 
 node_js:
   - "stable"
-  - "10.20.1"
+  - "10.24.1"
 
 dist: trusty
 sudo: false
