@@ -46,7 +46,7 @@
     "@babel/preset-typescript": "7.26.0",
     "@types/ace": "0.0.52",
     "@types/bootstrap": "^3.4.0",
-    "@types/enzyme": "3.10.18",
+    "@types/enzyme": "3.10.19",
     "@types/enzyme-adapter-react-16": "1.0.9",
     "@types/events": "3.0.3",
     "@types/jest": "25.2.3",
